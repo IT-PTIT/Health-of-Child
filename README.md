@@ -8,21 +8,21 @@ Time spent: **670** hours spent in total
 
 The following **required** functionality is completed:
 
-- [] Learn about your baby's development.
-- [] Chart development of the child.
-- [] Body system of the child.
-- [] Common problems of children.
-- [] Diagnosis is diagnosed according to the symptom chart.
-- [] Disease description and advice.
-- [] First aid and care for sick children.
-- [] Provide the nearest hospital location.
+- [ ] Learn about your baby's development.
+- [ ] Chart development of the child.
+- [ ] Body system of the child.
+- [ ] Common problems of children.
+- [ ] Diagnosis is diagnosed according to the symptom chart.
+- [ ] Disease description and advice.
+- [ ] First aid and care for sick children.
+- [ ] Provide the nearest hospital location.
 
 The following **optional** features are implemented:
 
-- [] Login via Facebook, Google.
-- [] Register account with Firebase.
-- [] Book mark.
-- [] Chat and call your doctor.
+- [ ] Login via Facebook, Google.
+- [ ] Register account with Firebase.
+- [ ] Book mark.
+- [ ] Chat and call your doctor.
 
 The following **additional** features are implemented:
 
