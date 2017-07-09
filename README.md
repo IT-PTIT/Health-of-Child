@@ -1,34 +1,28 @@
-# Project 2 - *Yelp project*
+# Demo Day - *Health Of Child*
 
-**Yelp project** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
+**Health Of Child** is a common diagnostic app for children 
 
-Time spent: **X** hours spent in total
+Time spent: **670** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [x] Search results page
-- [x] Table rows should be dynamic height according to the content height.
-- [x] Custom cells should have the proper Auto Layout constraints.
-- [x] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does).
-- [x] Filter page. Unfortunately, not all the filters are supported in the Yelp API.
-- [x] The filters you should actually have are: category, sort (best match, distance, highest rated), distance, deals (on/off).
-- [x] The filters table should be organized into sections as in the mock.
-- [x] You can use the default UISwitch for on/off states.
-- [x] Clicking on the "Search" button should dismiss the filters page and trigger the search w/ the new filter settings.
-- [x] Display some of the available Yelp categories (choose any 3-4 that you want).
+- [] Learn about your baby's development.
+- [] Chart development of the child.
+- [] Body system of the child.
+- [] Common problems of children.
+- [] Diagnosis is diagnosed according to the symptom chart.
+- [] Disease description and advice.
+- [] First aid and care for sick children.
+- [] Provide the nearest hospital location.
 
 The following **optional** features are implemented:
 
-- [x] Search results page
-- [x] Infinite scroll for restaurant results.
-- [ ] Implement map view of restaurant results.
-- [x] Filter page
-- [x] Implement a custom switch instead of the default UISwitch.
-- [ ] Distance filter should expand as in the real Yelp app
-- [x] Categories should show a subset of the full list with a "See All" row to expand. Category list is [here](http://www.yelp.com/developers/documentation/category_list).
-- [ ] Implement the restaurant detail page.
+- [] Login via Facebook, Google.
+- [] Register account with Firebase.
+- [] Book mark.
+- [] Chat and call your doctor.
 
 The following **additional** features are implemented:
 
@@ -43,7 +37,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/nthnhung237/CS_Week2/blob/master/new_yelp_starter-master/Yelp%20project.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='link git' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
