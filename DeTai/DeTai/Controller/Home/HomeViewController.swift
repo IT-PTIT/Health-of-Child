@@ -20,10 +20,12 @@ class HomeViewController: UIViewController {
     var time : Timer!
     var updateCounter : Int!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
         self.navigationItem.title = "HOME"
+       
         updateCounter = 0;
         time = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
@@ -45,17 +47,35 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func Chuong1Action(_ sender: Any) {
-        let thongtinView = self.storyboard?.instantiateViewController(withIdentifier: "IDInfoStep1ViewController") as? InfoStep1ViewController
-        self.navigationController?.pushViewController(thongtinView!, animated: true)
+      let infoVC = storyboard?.instantiateViewController(withIdentifier: "IDInfoStep1ViewController") as! InfoStep1ViewController
+        navigationController?.pushViewController(infoVC, animated: true)
+        infoVC.nameOfTitle = "Sơ bộ sự phát triển của trẻ"
+        infoVC.numberOfbutton = 1
+        print(infoVC.nameOfTitle)
     }
 
     @IBAction func Chuong2Action(_ sender: Any) {
+        let infoVC = storyboard?.instantiateViewController(withIdentifier: "IDInfoStep1ViewController") as! InfoStep1ViewController
+        navigationController?.pushViewController(infoVC, animated: true)
+        infoVC.nameOfTitle  = "Biểu đồ triệu chứng"
+        infoVC.numberOfbutton = 2
+        print(infoVC.nameOfTitle)
     }
     
     @IBAction func Chuong3Action(_ sender: Any) {
+        let infoVC = storyboard?.instantiateViewController(withIdentifier: "IDInfoStep1ViewController") as! InfoStep1ViewController
+        navigationController?.pushViewController(infoVC, animated: true)
+        infoVC.nameOfTitle = "Các bệnh thường gặp"
+        infoVC.numberOfbutton = 3
+        print(infoVC.nameOfTitle)
     }
     
     @IBAction func Chuong4Action(_ sender: Any) {
+        let infoVC = storyboard?.instantiateViewController(withIdentifier: "IDInfoStep1ViewController") as! InfoStep1ViewController
+        navigationController?.pushViewController(infoVC, animated: true)
+        infoVC.nameOfTitle = "Tư vấn chưa bệnh"
+        infoVC.numberOfbutton = 4
+        print(infoVC.nameOfTitle)
     }
     /*
     // MARK: - Navigation

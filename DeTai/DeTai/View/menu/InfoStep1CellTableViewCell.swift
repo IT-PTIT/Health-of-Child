@@ -8,10 +8,19 @@
 
 import UIKit
 
+protocol InfoStep1CellTableViewCellDelegate {
+    func infoStepCellTableViewCell(infoStepCellTableViewCell: InfoStep1CellTableViewCell, didChangeValue value: Bool)
+}
+
+
+
 class InfoStep1CellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgStep1: UIImageView!
     @IBOutlet weak var lbInfoStep1: UILabel!
+    @IBOutlet weak var lbldetail: UILabel!
+    
+    var delegate : InfoStep1CellTableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,8 +29,7 @@ class InfoStep1CellTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+                // Configure the view for the selected state
     }
 
 }

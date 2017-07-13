@@ -22,6 +22,7 @@
 		5BD6D57D1EC83AC90034A40A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6D57B1EC83AC90034A40A /* LaunchScreen.storyboard */; };
 		5BD6D5881EC83AC90034A40A /* DeTaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5871EC83AC90034A40A /* DeTaiTests.swift */; };
 		5BD6D5931EC83AC90034A40A /* DeTaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5921EC83AC90034A40A /* DeTaiUITests.swift */; };
+		7EB0F35F1F17D244001FC8B2 /* SeeMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB0F35E1F17D244001FC8B2 /* SeeMoreCell.swift */; };
 		B7EDFDC6EBD2F5E0CAB14A03 /* Pods_DeTaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */; };
 		D282E71FB2B6F7323A89FCEE /* Pods_DeTaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		5BD6D5921EC83AC90034A40A /* DeTaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeTaiUITests.swift; sourceTree = "<group>"; };
 		5BD6D5941EC83AC90034A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72D572A962C33DD485A80856 /* Pods-DeTai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTai.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeTai/Pods-DeTai.release.xcconfig"; sourceTree = "<group>"; };
+		7EB0F35E1F17D244001FC8B2 /* SeeMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeMoreCell.swift; sourceTree = "<group>"; };
 		9FF03BF67F3D10958E986CD6 /* Pods-DeTaiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTaiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeTaiUITests/Pods-DeTaiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTaiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EB14177A41CD02E821C6EE /* Pods_DeTai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +187,7 @@
 			children = (
 				5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */,
 				5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */,
+				7EB0F35E1F17D244001FC8B2 /* SeeMoreCell.swift */,
 			);
 			path = menu;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */,
 				5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */,
 				5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */,
+				7EB0F35F1F17D244001FC8B2 /* SeeMoreCell.swift in Sources */,
 				5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */,
 				5B1587141F13C09F00F0457A /* ViewController.swift in Sources */,
 				5B15871B1F13C0A800F0457A /* HeaderTableViewCell.swift in Sources */,
