@@ -40,8 +40,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func LoginAction(_ sender: Any) {
-        let homeViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "IDHomeViewController") as? HomeViewController
-        self.navigationController?.pushViewController(homeViewControllerObj!, animated: true)
+       // let homeViewControllerObj = self.storyboard?.instantiateViewController(withIdentifier: "IDHomeViewController") as? HomeViewController
+        //self.navigationController?.pushViewController(homeViewControllerObj!, animated: true)
     }
     
     @IBAction func RegisterAction(_ sender: Any) {
