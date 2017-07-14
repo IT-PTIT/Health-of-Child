@@ -208,6 +208,24 @@
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="102.99850074962519"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="nhh-1u-HGz">
+            <objects>
+                <viewController storyboardIdentifier="RegisterViewController" id="rUM-9D-0eE" customClass="RegisterViewController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hby-Wy-Jy2"/>
+                        <viewControllerLayoutGuide type="bottom" id="aT5-Lz-A65"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XBo-xS-FFj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhz-Pr-qMC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="907"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="Hy6-v5-kk9">
             <objects>
