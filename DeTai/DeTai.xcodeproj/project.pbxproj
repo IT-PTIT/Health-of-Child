@@ -21,6 +21,7 @@
 		41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6297B1F1A9CFF00ACF83E /* InboxViewController.swift */; };
 		41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6297D1F1A9D0D00ACF83E /* LocationViewController.swift */; };
 		41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6297F1F1A9D1800ACF83E /* ProfileViewController.swift */; };
+		41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B629811F1AA46A00ACF83E /* LoginViewController.swift */; };
 		5B15870B1F13C09600F0457A /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870A1F13C09600F0457A /* DataBase.swift */; };
 		5B1587131F13C09F00F0457A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870E1F13C09F00F0457A /* HomeViewController.swift */; };
 		5B1587141F13C09F00F0457A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587101F13C09F00F0457A /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		41B6297B1F1A9CFF00ACF83E /* InboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		41B6297D1F1A9D0D00ACF83E /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		41B6297F1F1A9D1800ACF83E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		41B629811F1AA46A00ACF83E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C782001EBA04FED31D6F8D3 /* Pods-DeTaiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTaiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeTaiTests/Pods-DeTaiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B15870A1F13C09600F0457A /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				41B629641F1A952F00ACF83E /* RootViewController.swift */,
+				41B629811F1AA46A00ACF83E /* LoginViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				5B15870B1F13C09600F0457A /* DataBase.swift in Sources */,
 				41B629781F1A9CD000ACF83E /* BabyTrackerViewController.swift in Sources */,
 				5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */,
+				41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
 				5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */,
