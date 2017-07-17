@@ -25,7 +25,6 @@
 		5B15870B1F13C09600F0457A /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870A1F13C09600F0457A /* DataBase.swift */; };
 		5B1587131F13C09F00F0457A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870E1F13C09F00F0457A /* HomeViewController.swift */; };
 		5B1587141F13C09F00F0457A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587101F13C09F00F0457A /* ViewController.swift */; };
-		5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587121F13C09F00F0457A /* RegisterViewController.swift */; };
 		5B15871B1F13C0A800F0457A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */; };
 		5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */; };
 		5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15871F1F13C15800F0457A /* InfoStep1ViewController.swift */; };
@@ -36,6 +35,7 @@
 		5BD6D5931EC83AC90034A40A /* DeTaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5921EC83AC90034A40A /* DeTaiUITests.swift */; };
 		B7EDFDC6EBD2F5E0CAB14A03 /* Pods_DeTaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */; };
 		D282E71FB2B6F7323A89FCEE /* Pods_DeTaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */; };
+		EA416A371F1CC0E90069135D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA416A361F1CC0E90069135D /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 		5B15870A1F13C09600F0457A /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		5B15870E1F13C09F00F0457A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B1587101F13C09F00F0457A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B1587121F13C09F00F0457A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStep1CellTableViewCell.swift; sourceTree = "<group>"; };
 		5B15871F1F13C15800F0457A /* InfoStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStep1ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		9FF03BF67F3D10958E986CD6 /* Pods-DeTaiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTaiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeTaiUITests/Pods-DeTaiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTaiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EB14177A41CD02E821C6EE /* Pods_DeTai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA416A361F1CC0E90069135D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +185,7 @@
 			children = (
 				41B629641F1A952F00ACF83E /* RootViewController.swift */,
 				41B629811F1AA46A00ACF83E /* LoginViewController.swift */,
+				EA416A361F1CC0E90069135D /* RegisterViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -283,7 +284,6 @@
 		5B1587111F13C09F00F0457A /* Resigter */ = {
 			isa = PBXGroup;
 			children = (
-				5B1587121F13C09F00F0457A /* RegisterViewController.swift */,
 			);
 			path = Resigter;
 			sourceTree = "<group>";
@@ -678,11 +678,11 @@
 				41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
-				5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */,
 				5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */,
 				5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */,
 				41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */,
 				41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */,
+				EA416A371F1CC0E90069135D /* RegisterViewController.swift in Sources */,
 				5B1587141F13C09F00F0457A /* ViewController.swift in Sources */,
 				41B6297A1F1A9CF200ACF83E /* DashBoardViewController.swift in Sources */,
 				5B15871B1F13C0A800F0457A /* HeaderTableViewCell.swift in Sources */,
