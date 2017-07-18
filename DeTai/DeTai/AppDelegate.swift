@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         // Override point for customization after application launch.
-        //FirebaseApp.configure()
+        FIRApp.configure()
         
         return true
     }
