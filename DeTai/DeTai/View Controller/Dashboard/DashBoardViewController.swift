@@ -52,7 +52,7 @@ class DashBoardViewController: UIViewController {
     
     func loadData() {
         let keys = ["1","2","3","4","5"]
-        let names = ["Tìm hiểu cơ thể của trẻ", "Chuẩn đoán", "Bệnh và các rối loạn", "Sơ cưu và chăm sóc trẻ bệnh", "Lịch sử"]
+        let names = ["Tìm hiểu cơ thể trẻ", "Chuẩn đoán", "Bệnh và các rối loạn", "Sơ cưu và chăm sóc trẻ", "Lịch sử"]
         let images = [#imageLiteral(resourceName: "Reading"), #imageLiteral(resourceName: "Dig"), #imageLiteral(resourceName: "launch"), #imageLiteral(resourceName: "take-care"), #imageLiteral(resourceName: "star")]
         for i in 0 ..< keys.count {
             dataHome.append(Categories(image: images[i], name: names[i], key: keys[i]))
