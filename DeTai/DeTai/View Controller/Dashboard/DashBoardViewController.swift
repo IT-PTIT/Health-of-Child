@@ -10,11 +10,24 @@ import UIKit
 
 class DashBoardViewController: UIViewController {
 
+    @IBOutlet weak var imageHome: UIImageView!
+    @IBOutlet weak var pageHome: UIPageControl!
+    @IBOutlet weak var collectionHome: UICollectionView!
+    
+    var time: Timer!
+    var updateCounter: Int!
+    var dataHome = [Categories]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = RootTab.dashboardTab.title
-
-        // Do any additional setup after loading the view.
+        // set up page controller
+        updateCounter = 0
+        time = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        loadData()
+        // set up collection
+        setupCollection()
+        self.collectionHome.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,15 +35,56 @@ class DashBoardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    internal func timerAction() {
+        if updateCounter < 5 {
+            pageHome.currentPage = updateCounter
+            imageHome.image = UIImage(named: String(updateCounter + 1) + ".jpg")
+            updateCounter = updateCounter + 1
+        } else {
+            updateCounter = 0
+        }
     }
-    */
+    
+    func setupCollection() {
+        collectionHome.delegate = self
+        collectionHome.dataSource = self
+    }
+    
+    func loadData() {
+        let keys = ["1","2","3","4","5"]
+        let names = ["Tìm hiểu cơ thể của trẻ", "Chuẩn đoán", "Bệnh và các rối loạn", "Sơ cưu và chăm sóc trẻ bệnh", "Lịch sử"]
+        let images = [#imageLiteral(resourceName: "Reading"), #imageLiteral(resourceName: "Dig"), #imageLiteral(resourceName: "launch"), #imageLiteral(resourceName: "take-care"), #imageLiteral(resourceName: "star")]
+        for i in 0 ..< keys.count {
+            dataHome.append(Categories(image: images[i], name: names[i], key: keys[i]))
+        }
+        
+    }
+    
+}
 
+extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataHome.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as? HomeCell
+        cell?.data = dataHome[indexPath.item]
+        return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.bounds.width/2 - 5, height: collectionView.bounds.width/2 - 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let newVC = MenuController.newVC(storyBoard: self.storyboard!)
+        self.navigationController?.pushViewController(newVC, animated: true)
+    }
 }

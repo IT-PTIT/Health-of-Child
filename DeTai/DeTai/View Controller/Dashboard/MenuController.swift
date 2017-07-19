@@ -1,25 +1,24 @@
 //
-//  RegisterViewController.swift
+//  MenuController.swift
 //  DeTai
 //
-//  Created by FunTap on 6/12/17.
+//  Created by Nhung on 7/19/17.
 //  Copyright © 2017 Nhung. All rights reserved.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
-
-    @IBOutlet weak var btAddAva: UIButton!
-    @IBOutlet weak var imgAvata: UIImageView!
-    @IBOutlet weak var tfRGUser: UITextField!
-    @IBOutlet weak var tfRGPass: UITextField!
-    @IBOutlet weak var btRgCancel: UIButton!
-    @IBOutlet weak var btRgRegister: UIButton!
+class MenuController: UIViewController {
     
+    class func newVC(storyBoard:UIStoryboard) -> MenuController {
+        
+        let newVC = storyBoard.instantiateViewController(withIdentifier: "MenuController") as! MenuController
+        return newVC
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
+        title = "Danh Sách"
         // Do any additional setup after loading the view.
     }
 
@@ -28,11 +27,7 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func RGRegisterAction(_ sender: Any) {
-    }
 
-    @IBAction func RGCancel(_ sender: Any) {
-    }
     /*
     // MARK: - Navigation
 

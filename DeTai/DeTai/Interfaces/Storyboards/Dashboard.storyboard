@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W2o-Ly-sP2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="W2o-Ly-sP2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Dash Board View Controller-->
         <scene sceneID="bGG-Ag-w7j">
             <objects>
-                <viewController id="mU8-Vs-GkQ" customClass="DashBoardViewController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mU8-Vs-GkQ" customClass="DashBoardViewController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yTX-Ie-WDb"/>
                         <viewControllerLayoutGuide type="bottom" id="aDr-s7-5OD"/>
@@ -21,21 +22,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-6G-41Y">
-                                <rect key="frame" x="104" y="265" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACKGROUND-1" translatesAutoresizingMaskIntoConstraints="NO" id="KWp-jU-GFj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lxH-Z6-8iv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="K4k-9W-GUU">
+                                <rect key="frame" x="4" y="249" width="367" height="37"/>
+                            </pageControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kud-GZ-pwG">
+                                <rect key="frame" x="5" y="291.5" width="365" height="375.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="INN-md-b2G">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KWp-jU-GFj" firstAttribute="leading" secondItem="yXt-pt-1Qw" secondAttribute="leading" id="2pW-V5-B0Z"/>
+                            <constraint firstItem="kud-GZ-pwG" firstAttribute="leading" secondItem="yXt-pt-1Qw" secondAttribute="leading" constant="5" id="5Gf-Cm-QUj"/>
+                            <constraint firstAttribute="trailing" secondItem="kud-GZ-pwG" secondAttribute="trailing" constant="5" id="KBu-bz-i2e"/>
+                            <constraint firstItem="aDr-s7-5OD" firstAttribute="top" secondItem="kud-GZ-pwG" secondAttribute="bottom" id="KGj-wZ-ZMJ"/>
+                            <constraint firstItem="kud-GZ-pwG" firstAttribute="top" secondItem="lxH-Z6-8iv" secondAttribute="bottom" constant="5" id="MwR-kC-cNj"/>
+                            <constraint firstItem="K4k-9W-GUU" firstAttribute="leading" secondItem="yXt-pt-1Qw" secondAttribute="leading" constant="4" id="T9W-gv-64d"/>
+                            <constraint firstAttribute="trailing" secondItem="KWp-jU-GFj" secondAttribute="trailing" id="WjO-tG-j9N"/>
+                            <constraint firstAttribute="trailing" secondItem="lxH-Z6-8iv" secondAttribute="trailing" id="WsT-2d-EQC"/>
+                            <constraint firstItem="lxH-Z6-8iv" firstAttribute="leading" secondItem="yXt-pt-1Qw" secondAttribute="leading" id="XMP-ll-vN2"/>
+                            <constraint firstItem="lxH-Z6-8iv" firstAttribute="height" secondItem="KWp-jU-GFj" secondAttribute="height" multiplier="1:3" id="dSi-U5-3Rw"/>
+                            <constraint firstItem="KWp-jU-GFj" firstAttribute="top" secondItem="yXt-pt-1Qw" secondAttribute="top" id="eOD-Gp-K9R"/>
+                            <constraint firstAttribute="trailing" secondItem="K4k-9W-GUU" secondAttribute="trailing" constant="4" id="f4X-o9-kmM"/>
+                            <constraint firstItem="K4k-9W-GUU" firstAttribute="bottom" secondItem="lxH-Z6-8iv" secondAttribute="bottom" id="fQo-7K-AyS"/>
+                            <constraint firstItem="aDr-s7-5OD" firstAttribute="top" secondItem="KWp-jU-GFj" secondAttribute="bottom" id="jpa-U7-dGP"/>
+                            <constraint firstItem="lxH-Z6-8iv" firstAttribute="top" secondItem="yTX-Ie-WDb" secondAttribute="bottom" id="r7d-fs-Q6e"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xXf-dN-YsD"/>
+                    <connections>
+                        <outlet property="collectionHome" destination="kud-GZ-pwG" id="Kfc-jQ-bvt"/>
+                        <outlet property="imageHome" destination="lxH-Z6-8iv" id="Lxn-9j-jlV"/>
+                        <outlet property="pageHome" destination="K4k-9W-GUU" id="MPj-ED-BRu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2I-M2-GMx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="984.79999999999995" y="87.706146926536732"/>
+        </scene>
+        <!--Menu Controller-->
+        <scene sceneID="zpN-w6-lvL">
+            <objects>
+                <viewController storyboardIdentifier="MenuController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EuI-Tp-1C7" customClass="MenuController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kwK-Na-Zdg"/>
+                        <viewControllerLayoutGuide type="bottom" id="a3T-8s-cqM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Nn-kz-azP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5e-sX-7z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nLJ-Wv-t9p">
@@ -56,4 +110,7 @@
             <point key="canvasLocation" x="45.600000000000001" y="87.706146926536732"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BACKGROUND-1" width="250" height="444"/>
+    </resources>
 </document>

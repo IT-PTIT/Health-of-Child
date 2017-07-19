@@ -22,14 +22,12 @@
 		41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6297D1F1A9D0D00ACF83E /* LocationViewController.swift */; };
 		41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B6297F1F1A9D1800ACF83E /* ProfileViewController.swift */; };
 		41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B629811F1AA46A00ACF83E /* LoginViewController.swift */; };
+		5B11CE691F1E6B9D00971EBD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11CE681F1E6B9D00971EBD /* HomeCell.swift */; };
+		5B11CE6B1F1E6BCD00971EBD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B11CE6A1F1E6BCD00971EBD /* HomeCell.xib */; };
 		5B15870B1F13C09600F0457A /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870A1F13C09600F0457A /* DataBase.swift */; };
-		5B1587131F13C09F00F0457A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15870E1F13C09F00F0457A /* HomeViewController.swift */; };
-		5B1587141F13C09F00F0457A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587101F13C09F00F0457A /* ViewController.swift */; };
-		5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587121F13C09F00F0457A /* RegisterViewController.swift */; };
-		5B15871B1F13C0A800F0457A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */; };
-		5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */; };
-		5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B15871F1F13C15800F0457A /* InfoStep1ViewController.swift */; };
 		5B15886E1F13D2A300F0457A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B15886D1F13D2A300F0457A /* GoogleService-Info.plist */; };
+		5B181F641F1F61AF001D797C /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B181F631F1F61AF001D797C /* MenuController.swift */; };
+		5B7C31191F1F043800DF59B8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7C31181F1F043800DF59B8 /* Categories.swift */; };
 		5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5721EC83AC90034A40A /* AppDelegate.swift */; };
 		5BD6D57A1EC83AC90034A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6D5791EC83AC90034A40A /* Assets.xcassets */; };
 		5BD6D5881EC83AC90034A40A /* DeTaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5871EC83AC90034A40A /* DeTaiTests.swift */; };
@@ -75,14 +73,12 @@
 		41B629811F1AA46A00ACF83E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C782001EBA04FED31D6F8D3 /* Pods-DeTaiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTaiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeTaiTests/Pods-DeTaiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTaiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B11CE681F1E6B9D00971EBD /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		5B11CE6A1F1E6BCD00971EBD /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		5B15870A1F13C09600F0457A /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		5B15870E1F13C09F00F0457A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5B1587101F13C09F00F0457A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B1587121F13C09F00F0457A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
-		5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStep1CellTableViewCell.swift; sourceTree = "<group>"; };
-		5B15871F1F13C15800F0457A /* InfoStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoStep1ViewController.swift; sourceTree = "<group>"; };
 		5B15886D1F13D2A300F0457A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B181F631F1F61AF001D797C /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		5B7C31181F1F043800DF59B8 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		5BD6D56F1EC83AC90034A40A /* DeTai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeTai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD6D5721EC83AC90034A40A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BD6D5791EC83AC90034A40A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,16 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				41B6295C1F1A94BD00ACF83E /* Storyboards */,
-				41B6295B1F1A94BD00ACF83E /* Cell */,
+				5B11CE661F1E6B4700971EBD /* Cell */,
 			);
 			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		41B6295B1F1A94BD00ACF83E /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		41B6295C1F1A94BD00ACF83E /* Storyboards */ = {
@@ -201,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				41B629791F1A9CF200ACF83E /* DashBoardViewController.swift */,
+				5B181F631F1F61AF001D797C /* MenuController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -229,6 +219,23 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		5B11CE661F1E6B4700971EBD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5B11CE671F1E6B6D00971EBD /* Home */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5B11CE671F1E6B6D00971EBD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B11CE681F1E6B9D00971EBD /* HomeCell.swift */,
+				5B11CE6A1F1E6BCD00971EBD /* HomeCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		5B1587071F13C09600F0457A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,69 +255,18 @@
 		5B1587091F13C09600F0457A /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				5B181F621F1F4A2F001D797C /* Data */,
 				5B15870A1F13C09600F0457A /* DataBase.swift */,
+				5B7C31181F1F043800DF59B8 /* Categories.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
 		};
-		5B15870C1F13C09F00F0457A /* Controller */ = {
+		5B181F621F1F4A2F001D797C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5B15871E1F13C15800F0457A /* Info */,
-				5B15870D1F13C09F00F0457A /* Home */,
-				5B15870F1F13C09F00F0457A /* Login */,
-				5B1587111F13C09F00F0457A /* Resigter */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		5B15870D1F13C09F00F0457A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5B15870E1F13C09F00F0457A /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		5B15870F1F13C09F00F0457A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				5B1587101F13C09F00F0457A /* ViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		5B1587111F13C09F00F0457A /* Resigter */ = {
-			isa = PBXGroup;
-			children = (
-				5B1587121F13C09F00F0457A /* RegisterViewController.swift */,
-			);
-			path = Resigter;
-			sourceTree = "<group>";
-		};
-		5B1587161F13C0A800F0457A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B1587171F13C0A800F0457A /* menu */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		5B1587171F13C0A800F0457A /* menu */ = {
-			isa = PBXGroup;
-			children = (
-				5B1587181F13C0A800F0457A /* HeaderTableViewCell.swift */,
-				5B1587191F13C0A800F0457A /* InfoStep1CellTableViewCell.swift */,
-			);
-			path = menu;
-			sourceTree = "<group>";
-		};
-		5B15871E1F13C15800F0457A /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				5B15871F1F13C15800F0457A /* InfoStep1ViewController.swift */,
-			);
-			path = Info;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5BD6D5661EC83AC80034A40A = {
@@ -341,8 +297,6 @@
 				41B6295A1F1A94BD00ACF83E /* Interfaces */,
 				41B629561F1A93EC00ACF83E /* View Controller */,
 				5B1587071F13C09600F0457A /* Model */,
-				5B1587161F13C0A800F0457A /* View */,
-				5B15870C1F13C09F00F0457A /* Controller */,
 				5BD6D5721EC83AC90034A40A /* AppDelegate.swift */,
 				5BD6D5791EC83AC90034A40A /* Assets.xcassets */,
 				5B15886D1F13D2A300F0457A /* GoogleService-Info.plist */,
@@ -505,6 +459,7 @@
 				41B629611F1A94BD00ACF83E /* LaunchScreen.storyboard in Resources */,
 				5B15886E1F13D2A300F0457A /* GoogleService-Info.plist in Resources */,
 				41B629691F1A976C00ACF83E /* Location.storyboard in Resources */,
+				5B11CE6B1F1E6BCD00971EBD /* HomeCell.xib in Resources */,
 				5BD6D57A1EC83AC90034A40A /* Assets.xcassets in Resources */,
 				41B6296B1F1A977F00ACF83E /* Dashboard.storyboard in Resources */,
 				41B629711F1A97B500ACF83E /* Profile.storyboard in Resources */,
@@ -674,19 +629,16 @@
 			files = (
 				5B15870B1F13C09600F0457A /* DataBase.swift in Sources */,
 				41B629781F1A9CD000ACF83E /* BabyTrackerViewController.swift in Sources */,
-				5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */,
+				5B11CE691F1E6B9D00971EBD /* HomeCell.swift in Sources */,
 				41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */,
+				5B181F641F1F61AF001D797C /* MenuController.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
-				5B1587151F13C09F00F0457A /* RegisterViewController.swift in Sources */,
-				5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */,
+				5B7C31191F1F043800DF59B8 /* Categories.swift in Sources */,
 				5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */,
 				41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */,
 				41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */,
-				5B1587141F13C09F00F0457A /* ViewController.swift in Sources */,
 				41B6297A1F1A9CF200ACF83E /* DashBoardViewController.swift in Sources */,
-				5B15871B1F13C0A800F0457A /* HeaderTableViewCell.swift in Sources */,
-				5B1587131F13C09F00F0457A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HomeCell" reuseIdentifier="HomeCell" id="e0q-S5-ZqR" customClass="HomeCell" customModule="DeTai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="255"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="255"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3rE-1p-99l">
+                        <rect key="frame" x="0.0" y="0.0" width="255" height="255"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="3rE-1p-99l" secondAttribute="height" id="fQy-qO-KE5"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHi-pc-QwT">
+                        <rect key="frame" x="0.0" y="191.5" width="255" height="63.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BHi-pc-QwT" firstAttribute="leading" secondItem="e0q-S5-ZqR" secondAttribute="leading" id="Gfa-jh-8u0"/>
+                <constraint firstAttribute="bottom" secondItem="3rE-1p-99l" secondAttribute="bottom" id="Sba-ZO-I6G"/>
+                <constraint firstItem="3rE-1p-99l" firstAttribute="leading" secondItem="e0q-S5-ZqR" secondAttribute="leading" id="e4g-lu-6fy"/>
+                <constraint firstItem="BHi-pc-QwT" firstAttribute="width" secondItem="3rE-1p-99l" secondAttribute="width" id="esh-lf-GkW"/>
+                <constraint firstAttribute="bottom" secondItem="BHi-pc-QwT" secondAttribute="bottom" id="mi1-tg-REt"/>
+                <constraint firstItem="3rE-1p-99l" firstAttribute="top" secondItem="e0q-S5-ZqR" secondAttribute="top" id="pUg-5d-Gme"/>
+                <constraint firstItem="BHi-pc-QwT" firstAttribute="height" secondItem="3rE-1p-99l" secondAttribute="height" multiplier="1:4" id="uC3-a8-NGG"/>
+            </constraints>
+            <size key="customSize" width="246" height="255"/>
+            <connections>
+                <outlet property="imageStep" destination="3rE-1p-99l" id="8I7-HT-Am8"/>
+                <outlet property="labelName" destination="BHi-pc-QwT" id="lep-dE-wHp"/>
+            </connections>
+            <point key="canvasLocation" x="-16" y="15.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
