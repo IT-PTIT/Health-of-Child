@@ -17,6 +17,7 @@ class DashBoardViewController: UIViewController {
     var time: Timer!
     var updateCounter: Int!
     var dataHome = [Categories]()
+    var header = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +86,22 @@ extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let newVC = MenuController.newVC(storyBoard: self.storyboard!)
+        
+        switch indexPath.item {
+        case 0:
+            header = ["CƠ THỂ HỌC VÀ SỰ PHÁT TRIỂN CỦA TRẺ","SỐNG KHOẺ MẠNH","NHỮNG VẤN ĐỂ Ở EM BÉ"]
+            newVC.numberSection = header
+        case 1:
+            header = ["TRẺ EM DƯỚI 1 TUỔI","TRẺ EM TRỂN 1 TUỔI", "TRẺ EM MỌI LỨA TUỔI"]
+            newVC.numberSection = header
+            newVC.loadMenu()
+        case 2:
+            header = ["BỆNH NHIỄM TRÙNG", "RỐI LOẠN CƠ, XƯƠNG & KHỚP","RỐI LOẠN VỀ DA","RỐI LOẠN VỀ MÁU & HỆ TUẦN HOÀN"]
+            newVC.numberSection = header
+        default:
+            header = []
+            newVC.numberSection = header
+        }
         self.navigationController?.pushViewController(newVC, animated: true)
     }
 }
