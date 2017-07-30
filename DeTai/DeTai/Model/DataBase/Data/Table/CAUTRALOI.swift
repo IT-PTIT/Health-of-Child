@@ -1,5 +1,5 @@
 //
-//  CAUHOI.swift
+//  CAUTRALOI.swift
 //  DeTai
 //
 //  Created by Nhung on 7/26/17.
@@ -9,12 +9,11 @@
 import Foundation
 import RealmSwift
 
-class CAUHOI: Object {
+class CAUTRALOI: Object {
+    dynamic var MaCTL = ""
+    dynamic var NDCTL = ""
     dynamic var MaCH = ""
-    dynamic var NoiDungCH = ""
-    dynamic var MaTC = ""
+    dynamic var MaCHCT = ""
     dynamic var MaTT = ""
-    //dynamic var DauHieu = ""
-    //dynamic var LuaTuoi = ""
+    dynamic var MaNN = ""
 }
-

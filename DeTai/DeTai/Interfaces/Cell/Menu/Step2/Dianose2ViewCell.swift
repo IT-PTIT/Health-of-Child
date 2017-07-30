@@ -9,7 +9,7 @@
 import UIKit
 
 protocol Dianose2ViewCellDelegate {
-    func RequestCauHoi(maCH: String, TT: String, index: IndexPath)
+    func RequestCauHoi(maCH: String,maNN: String, TT: String, index: IndexPath)
 }
 
 class Dianose2ViewCell: UITableViewCell {
@@ -72,8 +72,8 @@ class Dianose2ViewCell: UITableViewCell {
     func pressButton(button: UIButton){
         
        for item in CTL {
-            if button.titleLabel?.text == item.NoiDungCTL {
-                delegate?.RequestCauHoi(maCH: item.MaCHTT, TT: item.MaTT, index: indexth!)
+            if button.titleLabel?.text == item.NDCTL {
+                delegate?.RequestCauHoi(maCH: item.MaCHCT, maNN: item.MaNN, TT: item.MaTT, index: indexth!)
             }
         }
     }

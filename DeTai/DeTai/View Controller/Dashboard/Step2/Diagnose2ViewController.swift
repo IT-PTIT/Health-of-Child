@@ -28,7 +28,7 @@ class Diagnose2ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         Dianose2ViewCell.registerWith(tblView: tbvChuanDoan2)
         loadData(maCHDT: MaCHDT!)
         tbvChuanDoan2.delegate = self
@@ -46,7 +46,7 @@ class Diagnose2ViewController: UIViewController {
         cauhoi = ChuanDoanBaseDataStore.shared.getAllData(MaCH: maCHDT)
         CTL = ChuanDoanBaseDataStore.shared.getCAUTRALOI(MaCH: maCHDT)
         for item in CTL {
-            NDCTL.append(item.NoiDungCTL)
+            NDCTL.append(item.NDCTL)
         }
         tbvChuanDoan2.reloadData()
     }
@@ -62,7 +62,7 @@ extension Diagnose2ViewController : UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Dianose2ViewCell", for: indexPath) as! Dianose2ViewCell
         cell.delegate = self
         cell.indexth = indexPath
-        cell.lbCauHoi.text = cauhoi?.NoiDungCH
+        cell.lbCauHoi.text = cauhoi?.NDCH
         cell.titleButton = NDCTL
         for item in cell.button {
             item.removeFromSuperview()
@@ -79,9 +79,14 @@ extension Diagnose2ViewController : UITableViewDelegate, UITableViewDataSource {
 }
 
 extension Diagnose2ViewController: Dianose2ViewCellDelegate {
-    func RequestCauHoi(maCH: String, TT: String, index: IndexPath) {
-        if TT == "1" {
+    func RequestCauHoi(maCH: String,maNN: String, TT: String, index: IndexPath) {
+        if maCH != "NULL" {
             loadData(maCHDT: maCH)
+        }
+        if maNN != "NULL" {
+            let newVC = CauseViewController.newVC(storyBoard: self.storyboard!)
+            newVC.loadData(MaNN: maNN)
+            self.navigationController?.pushViewController(newVC, animated: true)
         }
     }
 }
