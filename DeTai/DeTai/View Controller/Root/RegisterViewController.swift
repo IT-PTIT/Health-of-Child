@@ -42,10 +42,10 @@ class RegisterViewController: UIViewController {
                 self.databaseRef.child("user_profiles").child((firUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
                     let snapshot = snapshot.value as? NSDictionary
                     if(snapshot == nil){
-                        self.databaseRef.child("user_profiles").child((firUser?.uid)!).child("name").setValue(self.usernameTextField.text)
-                        self.databaseRef.child("user_profiles").child((firUser?.uid)!).child("email").setValue(self.mailTextField.text)
-                        self.databaseRef.child("user_profiles").child((firUser?.uid)!).child("phone").setValue(self.phoneTextField.text)
-                        self.databaseRef.child("user_profiles").child((firUser?.uid)!).child("password").setValue(self.passwordTextField.text)
+                        self.databaseRef.child("user_profiles").child("user").child((firUser?.uid)!).child("name").setValue(self.usernameTextField.text)
+                        self.databaseRef.child("user_profiles").child("user").child((firUser?.uid)!).child("email").setValue(self.mailTextField.text)
+                        self.databaseRef.child("user_profiles").child("user").child((firUser?.uid)!).child("phone").setValue(self.phoneTextField.text)
+                        self.databaseRef.child("user_profiles").child("user").child((firUser?.uid)!).child("password").setValue(self.passwordTextField.text)
                     }
 
                 })

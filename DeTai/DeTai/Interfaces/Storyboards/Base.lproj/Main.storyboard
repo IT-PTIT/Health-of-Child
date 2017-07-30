@@ -159,6 +159,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6s-T0-gBA">
                                         <rect key="frame" x="8" y="393" width="270" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="0Tf-cC-THz"/>
+                                            <constraint firstAttribute="height" constant="40" id="edp-RX-BK6"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <color key="tintColor" red="0.30332857369999999" green="0.77013736960000001" blue="0.55211806299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Register">
@@ -179,6 +183,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9R-BZ-QbU">
                                         <rect key="frame" x="8" y="271" width="270" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="9p7-hI-N41"/>
+                                            <constraint firstAttribute="width" constant="270" id="pKr-Io-hNC"/>
+                                        </constraints>
                                         <state key="normal" image="btn_fb"/>
                                         <connections>
                                             <action selector="onloginFB:" destination="ZbS-PR-qst" eventType="touchUpInside" id="730-Rh-XRf"/>
@@ -187,6 +195,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLw-Tc-O9L">
                                         <rect key="frame" x="8" y="332" width="270" height="53"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="2Wk-r9-hPz"/>
+                                            <constraint firstAttribute="height" constant="53" id="S0Z-fJ-pw8"/>
+                                        </constraints>
                                         <state key="normal" image="btn_google">
                                             <color key="titleColor" red="0.84293752909999997" green="0.35868918900000002" blue="0.26385381819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -227,6 +239,7 @@
                                     <constraint firstItem="M7L-PZ-016" firstAttribute="width" secondItem="hw4-wN-sVl" secondAttribute="width" id="XA9-iQ-POQ"/>
                                     <constraint firstItem="y6s-T0-gBA" firstAttribute="leading" secondItem="wLw-Tc-O9L" secondAttribute="leading" id="XKL-76-BaA"/>
                                     <constraint firstItem="wLw-Tc-O9L" firstAttribute="trailing" secondItem="O9R-BZ-QbU" secondAttribute="trailing" id="XYb-L4-nLw"/>
+                                    <constraint firstAttribute="bottom" secondItem="y6s-T0-gBA" secondAttribute="bottom" constant="13" id="ZLH-bT-iRc"/>
                                     <constraint firstItem="wLw-Tc-O9L" firstAttribute="leading" secondItem="O9R-BZ-QbU" secondAttribute="leading" id="ac8-IC-3eI"/>
                                     <constraint firstItem="ej4-i7-CBl" firstAttribute="leading" secondItem="gsv-DA-rUG" secondAttribute="leading" id="cTF-Up-I9k"/>
                                     <constraint firstItem="VYn-NP-nlR" firstAttribute="top" secondItem="eGc-zp-DSS" secondAttribute="bottom" constant="15" id="duT-66-bSt"/>

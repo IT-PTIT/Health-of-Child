@@ -36,6 +36,7 @@
 		D282E71FB2B6F7323A89FCEE /* Pods_DeTaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */; };
 		EA416A371F1CC0E90069135D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA416A361F1CC0E90069135D /* RegisterViewController.swift */; };
 		EA44BF771F2CF0110018BF15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF761F2CF0110018BF15 /* GoogleService-Info.plist */; };
+		EA44BF791F2D68350018BF15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF781F2D68350018BF15 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		D6EB14177A41CD02E821C6EE /* Pods_DeTai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA416A361F1CC0E90069135D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EA44BF761F2CF0110018BF15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA44BF781F2D68350018BF15 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				5B15870A1F13C09600F0457A /* DataBase.swift */,
+				EA44BF781F2D68350018BF15 /* User.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				41B629781F1A9CD000ACF83E /* BabyTrackerViewController.swift in Sources */,
 				5B15871C1F13C0A800F0457A /* InfoStep1CellTableViewCell.swift in Sources */,
 				41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */,
+				EA44BF791F2D68350018BF15 /* User.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
 				5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */,
