@@ -33,30 +33,30 @@ enum RootTab {
     var icon: UIImage? {
         switch self {
         case .babyTrackerTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "NhatKi_InActive")
         case .locationTab:
-            return #imageLiteral(resourceName: "baby")
+            return  #imageLiteral(resourceName: "Vitri_InActive")
         case .dashboardTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "TinhNang_InActive")
         case .inboxTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "Email_InActive")
         case .profileTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "Profile_InActive")
         }
     }
     
     var selected_icon: UIImage? {
         switch self {
         case .babyTrackerTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "NhatKi_Active")
         case .locationTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "ViTri_Active")
         case .dashboardTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "TinhNang_Active")
         case .inboxTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "Email_Active")
         case .profileTab:
-            return #imageLiteral(resourceName: "baby")
+            return #imageLiteral(resourceName: "Profile_Active")
         }
     }
     
@@ -102,6 +102,9 @@ class RootViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let style = NSMutableParagraphStyle()
+        style.minimumLineHeight = 20
+        style.alignment = .center
         
         viewControllers = RootTab.tabItems.map {
             let controller = $0.controller
@@ -126,8 +129,9 @@ class RootTabBarItem: UITabBarItem {
         super.init()
         
         title = tab.title
-//        image = tab.icon
-//        selectedImage = tab.selected_icon
+        image = tab.icon
+        
+        selectedImage = tab.selected_icon
     }
     
     required init?(coder aDecoder: NSCoder) {
