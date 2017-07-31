@@ -25,7 +25,10 @@ class RegisterViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         // Do any additional setup after loading the view.
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        registerButton.layer.cornerRadius = 5.0
+        cancelButton.layer.cornerRadius = 5.0
+    }
     @IBAction func onTap(_ sender: Any) {
         view.endEditing(true)
     }

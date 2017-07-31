@@ -180,6 +180,9 @@
                                         </accessibility>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <state key="normal" title="Forgot password?"/>
+                                        <connections>
+                                            <action selector="onResetPass:" destination="ZbS-PR-qst" eventType="touchUpInside" id="fbL-YP-7g2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9R-BZ-QbU">
                                         <rect key="frame" x="8" y="271" width="270" height="53"/>
@@ -299,6 +302,121 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-3967.1999999999998" y="804.64767616191909"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="QtN-Lr-Nya">
+            <objects>
+                <viewController storyboardIdentifier="IDResetPasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="twd-4L-fP3" customClass="ResetPasswordViewController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Shd-UR-v5A"/>
+                        <viewControllerLayoutGuide type="bottom" id="MAU-uP-NLn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IcI-G7-gFS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background RSPW" translatesAutoresizingMaskIntoConstraints="NO" id="Lag-Qa-naz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfP-B8-jba">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mời bạn nhập email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhh-Wn-LBK">
+                                        <rect key="frame" x="50" y="271" width="275" height="19"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjo-Tq-Odp">
+                                        <rect key="frame" x="50" y="100" width="275" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="40"/>
+                                        <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVL-2a-Ev3">
+                                        <rect key="frame" x="80" y="397" width="56" height="31"/>
+                                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="KOc-PA-X1E"/>
+                                            <constraint firstAttribute="height" constant="31" id="UtK-mh-gqW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onResetPassword:" destination="twd-4L-fP3" eventType="touchUpInside" id="6Wi-Vu-Ngb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-13-tnj">
+                                        <rect key="frame" x="239" y="397" width="56" height="31"/>
+                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="n9u-e3-cBU"/>
+                                            <constraint firstAttribute="width" constant="56" id="rb7-oU-fsI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCancel:" destination="twd-4L-fP3" eventType="touchUpInside" id="C8r-L5-pWr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmV-Z6-srx">
+                                        <rect key="frame" x="50" y="308" width="275" height="30"/>
+                                        <color key="backgroundColor" red="0.72149878740310669" green="0.72161906957626343" blue="0.7214733362197876" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="275" id="0O4-JI-I8c"/>
+                                            <constraint firstAttribute="height" constant="30" id="nMr-8G-iuW"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mmV-Z6-srx" secondAttribute="trailing" constant="50" id="HFH-PD-FvA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bhh-Wn-LBK" secondAttribute="trailing" constant="50" id="Iu5-du-CqW"/>
+                                    <constraint firstItem="Kjo-Tq-Odp" firstAttribute="leading" secondItem="HfP-B8-jba" secondAttribute="leading" constant="50" id="LMk-fd-0Q7"/>
+                                    <constraint firstItem="Kjo-Tq-Odp" firstAttribute="top" secondItem="HfP-B8-jba" secondAttribute="top" constant="100" id="PoV-Bk-O0o"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wew-13-tnj" secondAttribute="trailing" constant="80" id="Toj-xH-Uty"/>
+                                    <constraint firstItem="Bhh-Wn-LBK" firstAttribute="top" secondItem="Kjo-Tq-Odp" secondAttribute="bottom" constant="120.5" id="Wej-aB-m3g"/>
+                                    <constraint firstItem="LVL-2a-Ev3" firstAttribute="top" secondItem="mmV-Z6-srx" secondAttribute="bottom" constant="59" id="gPf-dO-KxX"/>
+                                    <constraint firstItem="mmV-Z6-srx" firstAttribute="leading" secondItem="HfP-B8-jba" secondAttribute="leading" constant="50" id="k2w-yN-HC9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wew-13-tnj" secondAttribute="bottom" constant="219" id="kbo-PR-ke8"/>
+                                    <constraint firstItem="Wew-13-tnj" firstAttribute="leading" secondItem="LVL-2a-Ev3" secondAttribute="trailing" constant="103" id="pkM-JJ-xYU"/>
+                                    <constraint firstAttribute="bottom" secondItem="LVL-2a-Ev3" secondAttribute="bottom" constant="219" id="qyz-a5-weI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kjo-Tq-Odp" secondAttribute="trailing" constant="50" id="rdz-jf-Mf2"/>
+                                    <constraint firstItem="Wew-13-tnj" firstAttribute="top" secondItem="mmV-Z6-srx" secondAttribute="bottom" constant="59" id="ss3-FI-MVQ"/>
+                                    <constraint firstItem="Bhh-Wn-LBK" firstAttribute="leading" secondItem="HfP-B8-jba" secondAttribute="leading" constant="50" id="uaJ-ch-gIJ"/>
+                                    <constraint firstItem="LVL-2a-Ev3" firstAttribute="leading" secondItem="HfP-B8-jba" secondAttribute="leading" constant="80" id="vSn-WG-FjG"/>
+                                    <constraint firstItem="mmV-Z6-srx" firstAttribute="top" secondItem="Bhh-Wn-LBK" secondAttribute="bottom" constant="18" id="yKB-DB-S4A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lag-Qa-naz" secondAttribute="trailing" id="0x9-PA-dQE"/>
+                            <constraint firstItem="MAU-uP-NLn" firstAttribute="top" secondItem="HfP-B8-jba" secondAttribute="bottom" id="4hR-AO-7OC"/>
+                            <constraint firstItem="Lag-Qa-naz" firstAttribute="top" secondItem="Shd-UR-v5A" secondAttribute="bottom" id="CGI-Iz-goo"/>
+                            <constraint firstItem="MAU-uP-NLn" firstAttribute="top" secondItem="Lag-Qa-naz" secondAttribute="bottom" id="ZdO-lC-6JP"/>
+                            <constraint firstAttribute="trailing" secondItem="HfP-B8-jba" secondAttribute="trailing" id="aEu-vj-b0N"/>
+                            <constraint firstItem="Lag-Qa-naz" firstAttribute="leading" secondItem="IcI-G7-gFS" secondAttribute="leading" id="tcO-XT-kxk"/>
+                            <constraint firstItem="HfP-B8-jba" firstAttribute="top" secondItem="Shd-UR-v5A" secondAttribute="bottom" id="wlT-D8-6ii"/>
+                            <constraint firstItem="HfP-B8-jba" firstAttribute="leading" secondItem="IcI-G7-gFS" secondAttribute="leading" id="zsR-E4-nuW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="Wew-13-tnj" id="zuu-pc-ZG8"/>
+                        <outlet property="emailTextField" destination="mmV-Z6-srx" id="AWc-ps-ni5"/>
+                        <outlet property="onResetPassword" destination="LVL-2a-Ev3" id="Cra-F5-yWw"/>
+                        <outlet property="resetPasswordButton" destination="LVL-2a-Ev3" id="ebY-hv-ET0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05i-kz-oTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2935.1999999999998" y="760.56971514242889"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="ood-YQ-6EZ">
@@ -1350,6 +1468,7 @@
         <image name="baby" width="348" height="492"/>
         <image name="baby_ sleep" width="300" height="300"/>
         <image name="baby_background copy" width="376" height="647"/>
+        <image name="background RSPW" width="600" height="590"/>
         <image name="btn_fb" width="304" height="53"/>
         <image name="btn_google" width="304" height="53"/>
         <image name="cancel" width="32" height="32"/>

@@ -10,51 +10,84 @@ import UIKit
 import GoogleSignIn
 import FBSDKCoreKit
 import Firebase
-class ProfileViewController: UIViewController {
+import FirebaseDatabase
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var changeImageButton: UIButton!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var birthdateLabel: UIView!
+    @IBOutlet weak var numberphoneLabel: UILabel!
+    @IBOutlet weak var updateInfoPSNButton: UIButton!
+    
+    let databaseRef = FIRDatabase.database().reference()
+    var userJSON = [user_profile]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = RootTab.profileTab.title
-        // Do any additional setup after loading the view.
+        loadData()
+            }
+    override func viewDidAppear(_ animated: Bool) {
+        updateInfoPSNButton.layer.cornerRadius = 5.0
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2.0
+        profileImage.clipsToBounds = true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-  
     @IBAction func onLogout(_ sender: Any) {
         if GIDSignIn.sharedInstance().hasAuthInKeychain() == true {
             GIDSignIn.sharedInstance().signOut()
-//            logout.isHidden = true
-//            customButton.isHidden = false
-//            defaultButton.isHidden = false
-           // alert("Logged Out", message: "")
             print("Logout success")
-            //if let storyboard = self.storyboard {
-               // let vc = storyboard.instantiateViewController(withIdentifier: "IDLoginViewController") as! LoginViewController
                 dismiss(animated: true, completion: nil)
-            //}
-          //  dismiss(animated: true, completion: nil)
         }else if FBSDKAccessToken.current() != nil || FIRAuth.auth()?.currentUser != nil{
            try! FIRAuth.auth()?.signOut()
-           // if let storyboard = self.storyboard {
-                //let vc = storyboard.instantiateViewController(withIdentifier: "IDLoginViewController") as! LoginViewController
                 dismiss(animated: true, completion: nil)
             print("Logout success")
-            //}
         }
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func onUpdateInfor(_ sender: Any) {
+        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "IDUpdateInfoPSNViewController") as! UpdateInfoPSNViewController
+        self.present(myVC, animated: true, completion: nil)
     }
-    */
 
+    @IBAction func onChange(_ sender: Any) {
+        let imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.allowsEditing = true
+        imgPicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(imgPicker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        var selectedImgfromPicker: UIImage?
+        if let edittedImg = info[UIImagePickerControllerEditedImage] as? UIImage{
+            selectedImgfromPicker = edittedImg
+        }
+        else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            selectedImgfromPicker = originalImage
+        }
+        if let selectedImg = selectedImgfromPicker{
+            profileImage.image = selectedImg
+            dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    func saveChange(){
+    
+    }
+    func loadData(){
+        let uid = FIRAuth.auth()?.currentUser?.uid
+        databaseRef.child("user_profiles").child("user").child(uid!).observeSingleEvent(of: .childAdded, with: { (snapshot) in
+            if let userdataJSON = snapshot.value as? [String:Any]{
+                for item in userdataJSON{
+                    self.userJSON.append(<#T##newElement: user_profile##user_profile#>)
+                }
+            }
+        })
+    }
 }

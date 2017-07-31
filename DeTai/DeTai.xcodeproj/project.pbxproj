@@ -37,6 +37,9 @@
 		EA416A371F1CC0E90069135D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA416A361F1CC0E90069135D /* RegisterViewController.swift */; };
 		EA44BF771F2CF0110018BF15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA44BF761F2CF0110018BF15 /* GoogleService-Info.plist */; };
 		EA44BF791F2D68350018BF15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF781F2D68350018BF15 /* User.swift */; };
+		EA44BF7B1F2D9BDF0018BF15 /* UpdateInfoPSNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA44BF7A1F2D9BDF0018BF15 /* UpdateInfoPSNViewController.swift */; };
+		EAE5A7E01F2DC9D10078AF02 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE5A7DF1F2DC9D10078AF02 /* SVProgressHUD.framework */; };
+		EAE5A7E21F2DCD8A0078AF02 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5A7E11F2DCD8A0078AF02 /* ResetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		EA416A361F1CC0E90069135D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		EA44BF761F2CF0110018BF15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA44BF781F2D68350018BF15 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EA44BF7A1F2D9BDF0018BF15 /* UpdateInfoPSNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoPSNViewController.swift; sourceTree = "<group>"; };
+		EAE5A7DF1F2DC9D10078AF02 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
+		EAE5A7E11F2DCD8A0078AF02 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE5A7E01F2DC9D10078AF02 /* SVProgressHUD.framework in Frameworks */,
 				33573C09CFA849F95DC3AD67 /* Pods_DeTai.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +139,7 @@
 		098775556FC3E59E093E43B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAE5A7DF1F2DC9D10078AF02 /* SVProgressHUD.framework */,
 				D6EB14177A41CD02E821C6EE /* Pods_DeTai.framework */,
 				513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */,
 				B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */,
@@ -188,6 +196,7 @@
 				41B629641F1A952F00ACF83E /* RootViewController.swift */,
 				41B629811F1AA46A00ACF83E /* LoginViewController.swift */,
 				EA416A361F1CC0E90069135D /* RegisterViewController.swift */,
+				EAE5A7E11F2DCD8A0078AF02 /* ResetPasswordViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -228,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				41B6297F1F1A9D1800ACF83E /* ProfileViewController.swift */,
+				EA44BF7A1F2D9BDF0018BF15 /* UpdateInfoPSNViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -683,6 +693,8 @@
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
 				5B1587201F13C15800F0457A /* InfoStep1ViewController.swift in Sources */,
+				EA44BF7B1F2D9BDF0018BF15 /* UpdateInfoPSNViewController.swift in Sources */,
+				EAE5A7E21F2DCD8A0078AF02 /* ResetPasswordViewController.swift in Sources */,
 				5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */,
 				41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */,
 				41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */,
@@ -847,6 +859,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = SH8B4PAMDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+				);
 				INFOPLIST_FILE = DeTai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HongNhung.DeTai;
@@ -862,6 +878,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = SH8B4PAMDW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+				);
 				INFOPLIST_FILE = DeTai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HongNhung.DeTai;
