@@ -16,16 +16,26 @@ class TrieuChungBaseDataStore : NSObject
     
     static let shared = TrieuChungBaseDataStore() //Singeton
     let realm = try! Realm()
-    var TrieuChung = [TRIEUCHUNG]()
+    var ALLTrieuChung = [TRIEUCHUNG]()
+    var TrieuChung = TRIEUCHUNG()
     
     func getAllData() -> [TRIEUCHUNG]
     {
-        self.TrieuChung.removeAll()
+        self.ALLTrieuChung.removeAll()
         let TrieuChung = realm.objects(TRIEUCHUNG.self)
         for item in TrieuChung {
-            self.TrieuChung.append(item)
+            self.ALLTrieuChung.append(item)
         }
         
+        return self.ALLTrieuChung
+    }
+    
+    func getTrieuChung(MaTC: String) -> TRIEUCHUNG {
+        let predicate = NSPredicate(format: "MaTC = %@", MaTC)
+        let cauhoi = realm.objects(TRIEUCHUNG.self).filter(predicate)
+        for item in cauhoi {
+            self.TrieuChung = item
+        }
         return self.TrieuChung
     }
     

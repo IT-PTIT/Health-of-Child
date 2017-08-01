@@ -32,6 +32,9 @@
 		5B11CE691F1E6B9D00971EBD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B11CE681F1E6B9D00971EBD /* HomeCell.swift */; };
 		5B11CE6B1F1E6BCD00971EBD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B11CE6A1F1E6BCD00971EBD /* HomeCell.xib */; };
 		5B181F641F1F61AF001D797C /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B181F631F1F61AF001D797C /* MenuController.swift */; };
+		5B28F07C1F2E2869007A3F1D /* TGQTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28F07A1F2E2869007A3F1D /* TGQTableViewCell.swift */; };
+		5B28F07D1F2E2869007A3F1D /* TGQTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B28F07B1F2E2869007A3F1D /* TGQTableViewCell.xib */; };
+		5B28F07F1F2E29E4007A3F1D /* TGQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28F07E1F2E29E4007A3F1D /* TGQViewController.swift */; };
 		5B37C1581F2BEC8400B87832 /* CauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37C1571F2BEC8400B87832 /* CauseViewController.swift */; };
 		5B37C15A1F2BEDAD00B87832 /* CauseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */; };
 		5B37C15C1F2BEDC300B87832 /* CauseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */; };
@@ -105,6 +108,9 @@
 		5B11CE681F1E6B9D00971EBD /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		5B11CE6A1F1E6BCD00971EBD /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		5B181F631F1F61AF001D797C /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		5B28F07A1F2E2869007A3F1D /* TGQTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGQTableViewCell.swift; sourceTree = "<group>"; };
+		5B28F07B1F2E2869007A3F1D /* TGQTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGQTableViewCell.xib; sourceTree = "<group>"; };
+		5B28F07E1F2E29E4007A3F1D /* TGQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGQViewController.swift; sourceTree = "<group>"; };
 		5B37C1571F2BEC8400B87832 /* CauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseViewController.swift; sourceTree = "<group>"; };
 		5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseViewCell.swift; sourceTree = "<group>"; };
 		5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CauseViewCell.xib; sourceTree = "<group>"; };
@@ -275,6 +281,8 @@
 				5B0C957B1F2BA89B002BC2D3 /* Dianose2ViewCell.xib */,
 				5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */,
 				5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */,
+				5B28F07A1F2E2869007A3F1D /* TGQTableViewCell.swift */,
+				5B28F07B1F2E2869007A3F1D /* TGQTableViewCell.xib */,
 			);
 			path = Step2;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				5B0C95751F2BA839002BC2D3 /* DiagnoseViewController.swift */,
 				5B0C95771F2BA857002BC2D3 /* Diagnose2ViewController.swift */,
 				5B37C1571F2BEC8400B87832 /* CauseViewController.swift */,
+				5B28F07E1F2E29E4007A3F1D /* TGQViewController.swift */,
 			);
 			path = Step2;
 			sourceTree = "<group>";
@@ -572,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B629671F1A975B00ACF83E /* BabyTracker.storyboard in Resources */,
+				5B28F07D1F2E2869007A3F1D /* TGQTableViewCell.xib in Resources */,
 				41B629611F1A94BD00ACF83E /* LaunchScreen.storyboard in Resources */,
 				41B629691F1A976C00ACF83E /* Location.storyboard in Resources */,
 				5B0C957C1F2BA89B002BC2D3 /* Dianose2ViewCell.xib in Resources */,
@@ -752,6 +762,7 @@
 				5BB3A0B61F265256006E7CFA /* MenuTableViewCell.swift in Sources */,
 				5B8D09941F2DE4480033346D /* BENH.swift in Sources */,
 				5B0C957E1F2BC5C4002BC2D3 /* ChuanDoanBaseDataStore.swift in Sources */,
+				5B28F07C1F2E2869007A3F1D /* TGQTableViewCell.swift in Sources */,
 				5B0C956F1F2B880A002BC2D3 /* DiagnoseCell.swift in Sources */,
 				5B11CE691F1E6B9D00971EBD /* HomeCell.swift in Sources */,
 				5B0C95781F2BA857002BC2D3 /* Diagnose2ViewController.swift in Sources */,
@@ -775,6 +786,7 @@
 				41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */,
 				5B0C957A1F2BA886002BC2D3 /* Dianose2ViewCell.swift in Sources */,
 				41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */,
+				5B28F07F1F2E29E4007A3F1D /* TGQViewController.swift in Sources */,
 				5B8D09961F2DE4480033346D /* CAUTRALOI.swift in Sources */,
 				41B6297A1F1A9CF200ACF83E /* DashBoardViewController.swift in Sources */,
 			);

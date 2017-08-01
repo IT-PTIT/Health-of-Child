@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CauseViewCellDelegate {
+    func RequestTGQ(maTGQ: String)
+}
+
 class CauseViewCell: UITableViewCell {
     
     static let identifier:String = "CauseViewCell"
@@ -27,11 +31,14 @@ class CauseViewCell: UITableViewCell {
     
     var heigthCell : CGFloat?
     var button = [UIButton]()
+    var titleButton = [String]()
+    var TGQ = [TUGIAIQUYET]()
+    var delegate: CauseViewCellDelegate?
+    var index: IndexPath?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        heigthCell = 60 + lbNDHD.frame.height + lbNDTGQ.frame.height + lbNDNN.frame.height
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -54,20 +61,22 @@ class CauseViewCell: UITableViewCell {
     }
     
     func Create(numberButton: Int) {
-//        let x = viewDianose.frame.origin.x + 20
-//        var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 60
-//        button.removeAll()
-//        for i in 0..<numberButton {
-//            let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 220 , height: 50))
-//            initButton(_button: button, _title: titleButton[i])
-//            y += 60
-//        }
-//        heigtView = y
+        let x = self.contentView.frame.origin.x + 20
+        var y = lbYte.bounds.height + lbNDNN.bounds.height + lbNDTGQ.bounds.height + 250
+        button.removeAll()
+        for i in 0..<numberButton {
+            let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 260 , height: 30))
+            initButton(_button: button, _title: "XEM " + titleButton[i])
+            y += 70
+        }
+        heigthCell = y
     }
-    
     func pressButton(button: UIButton){
-        
-        
+        for item in TGQ {
+            if button.titleLabel?.text == "XEM " + item.TenTGQ {
+                delegate?.RequestTGQ(maTGQ: item.MaTGQ)
+            }
+        }
     }
 
 }

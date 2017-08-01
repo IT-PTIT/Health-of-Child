@@ -20,6 +20,7 @@ class TGQBaseDataStore : NSObject
     
     func getAllData(MaNN: String) -> [TUGIAIQUYET]
     {
+        TGQ.removeAll()
         let predicate = NSPredicate(format: "MaNN = %@", MaNN)
         let nn = realm.objects(NN_TGQ.self).filter(predicate)
         for item in nn {

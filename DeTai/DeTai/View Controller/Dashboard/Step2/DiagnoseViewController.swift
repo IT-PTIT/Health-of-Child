@@ -19,6 +19,7 @@ class DiagnoseViewController: UIViewController {
     @IBOutlet weak var tbvDiagnose: UITableView!
     
     var trieuchung: TRIEUCHUNG?
+    var heigtRow: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class DiagnoseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadTC(MaTC: String) {
+        trieuchung = TrieuChungBaseDataStore.shared.getTrieuChung(MaTC: MaTC)
     }
 
 }
@@ -57,11 +62,12 @@ extension DiagnoseViewController: UITableViewDelegate, UITableViewDataSource {
             cell.lbTitle.text = trieuchung?.TenTC
             cell.imageTitle.image = #imageLiteral(resourceName: "sleeping")
         }
+        heigtRow = cell.imageTitle.bounds.height + cell.lbTitle.bounds.height + cell.lbMoTa.bounds.height + cell.lbDauHieu.bounds.height + 500
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 600
+        return heigtRow
     }
 }
 

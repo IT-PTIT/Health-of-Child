@@ -263,7 +263,7 @@
         <!--View Controller-->
         <scene sceneID="ccu-E3-Dnc">
             <objects>
-                <viewController id="Etl-ce-yer" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TGQViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Etl-ce-yer" customClass="TGQViewController" customModule="DeTai" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PHf-Hw-gNH"/>
                         <viewControllerLayoutGuide type="bottom" id="wFM-8j-iM5"/>
@@ -292,6 +292,9 @@
                             <constraint firstItem="wFM-8j-iM5" firstAttribute="top" secondItem="DOA-Gh-kk5" secondAttribute="bottom" id="wih-Pf-ltz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tbvTGQ" destination="Znz-mM-jeQ" id="yaA-GG-Asy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fag-qI-duo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

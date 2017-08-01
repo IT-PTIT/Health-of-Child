@@ -23,8 +23,10 @@ class Dianose2ViewCell: UITableViewCell {
     @IBOutlet weak var imageBaby: UIImageView!
     @IBOutlet weak var viewDianose: UIView!
     @IBOutlet weak var lbCauHoi: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     
     var CTL = [CAUTRALOI]()
+    var CH = CAUHOI()
     var titleButton = [String]()
     var heigtView = CGFloat()
     var delegate: Dianose2ViewCellDelegate?
@@ -42,11 +44,13 @@ class Dianose2ViewCell: UITableViewCell {
         viewDianose.layer.borderWidth = 1
         viewDianose.layer.borderColor = UIColor.red.cgColor
         viewDianose.layer.cornerRadius = 5
+        btnBack.isHidden = true
     }
     
     func initButton(_button: UIButton, _title: String) {
         _button.setTitle(_title, for: UIControlState.normal)
         _button.setTitleColor(UIColor.black, for: UIControlState.normal)
+        _button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         _button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         _button.layer.borderColor = UIColor.black.cgColor
         _button.backgroundColor = UIColor.init(colorLiteralRed: (255/255), green: (9/255), blue: (102/255), alpha: 1)
@@ -59,24 +63,29 @@ class Dianose2ViewCell: UITableViewCell {
     
     func Create(numberButton: Int) {
         let x = viewDianose.frame.origin.x + 20
-        var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 60
+        var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 120
         button.removeAll()
         for i in 0..<numberButton {
             let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 220 , height: 50))
             initButton(_button: button, _title: titleButton[i])
             y += 60
         }
-        heigtView = y
+        heigtView = y + btnBack.bounds.height
     }
     
     func pressButton(button: UIButton){
         
        for item in CTL {
             if button.titleLabel?.text == item.NDCTL {
+                btnBack.isHidden = false
                 delegate?.RequestCauHoi(maCH: item.MaCHCT, maNN: item.MaNN, TT: item.MaTT, index: indexth!)
             }
         }
     }
-
+    
+    @IBAction func BackAction(_ sender: Any) {
+        
+    }
+    
 
 }

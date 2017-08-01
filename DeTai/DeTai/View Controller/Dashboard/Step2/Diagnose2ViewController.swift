@@ -70,6 +70,7 @@ extension Diagnose2ViewController : UITableViewDelegate, UITableViewDataSource {
         cell.Create(numberButton: CTL.count)
         heigthRow = cell.heigtView
         cell.CTL = CTL
+        cell.CH = cauhoi!
         return cell
     }
     
@@ -80,13 +81,21 @@ extension Diagnose2ViewController : UITableViewDelegate, UITableViewDataSource {
 
 extension Diagnose2ViewController: Dianose2ViewCellDelegate {
     func RequestCauHoi(maCH: String,maNN: String, TT: String, index: IndexPath) {
-        if maCH != "NULL" {
-            loadData(maCHDT: maCH)
-        }
-        if maNN != "NULL" {
-            let newVC = CauseViewController.newVC(storyBoard: self.storyboard!)
-            newVC.loadData(MaNN: maNN)
-            self.navigationController?.pushViewController(newVC, animated: true)
+        if TT == "0" {
+            if maCH != "NULL" {
+                loadData(maCHDT: maCH)
+            }
+            if maNN != "NULL" {
+                let newVC = CauseViewController.newVC(storyBoard: self.storyboard!)
+                newVC.loadData(MaNN: maNN)
+                self.navigationController?.pushViewController(newVC, animated: true)
+            }
+        } else if TT == "1" {
+            
+        }else if TT == "2" {
+            let backVC = DiagnoseViewController.newVC(storyBoard: self.storyboard!)
+            backVC.loadTC(MaTC: maCH)
+            self.navigationController?.pushViewController(backVC, animated: true)
         }
     }
 }
