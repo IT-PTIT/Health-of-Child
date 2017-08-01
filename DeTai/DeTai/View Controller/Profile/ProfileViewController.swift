@@ -18,12 +18,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var birthdateLabel: UIView!
+    @IBOutlet weak var birthdateLabel: UILabel!
     @IBOutlet weak var numberphoneLabel: UILabel!
     @IBOutlet weak var updateInfoPSNButton: UIButton!
     
     let databaseRef = FIRDatabase.database().reference()
-    var userJSON = [user_profile]()
+   // var userJSON = [user_profile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
                 dismiss(animated: true, completion: nil)
         }else if FBSDKAccessToken.current() != nil || FIRAuth.auth()?.currentUser != nil{
            try! FIRAuth.auth()?.signOut()
+                
                 dismiss(animated: true, completion: nil)
             print("Logout success")
         }
@@ -78,14 +79,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
         dismiss(animated: true, completion: nil)
     }
     func saveChange(){
-    
+       
     }
     func loadData(){
         let uid = FIRAuth.auth()?.currentUser?.uid
-        databaseRef.child("user_profiles").child("user").child(uid!).observeSingleEvent(of: .childAdded, with: { (snapshot) in
+        databaseRef.child("user_profiles").child("user").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let userdataJSON = snapshot.value as? [String:Any]{
-                for item in userdataJSON{
-                    self.userJSON.append(<#T##newElement: user_profile##user_profile#>)
+                self.usernameLabel.text = userdataJSON["name"] as? String
+                self.emailLabel.text = userdataJSON["email"] as? String
+                self.nicknameLabel.text = userdataJSON["nickname"] as? String
+                self.numberphoneLabel.text = userdataJSON["phone"] as? String
+                self.birthdateLabel.text = userdataJSON["birthday"] as? String
+                if let profileImageUrl = userdataJSON["pic"] as? String{
+                let url = URL(string: profileImageUrl)
+                    URLSession.shared.dataTask(with: url!, completionHandler: { (data, respone, error) in
+                        if error != nil{
+                        print(error!)
+                            return
+                        }
+                        DispatchQueue.main.async {
+                            self.profileImage.image = UIImage(data: data!)
+                        }
+                    })
                 }
             }
         })

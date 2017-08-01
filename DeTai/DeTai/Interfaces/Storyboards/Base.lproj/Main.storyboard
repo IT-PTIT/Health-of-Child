@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZbS-PR-qst">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZbS-PR-qst">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -181,7 +181,7 @@
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <state key="normal" title="Forgot password?"/>
                                         <connections>
-                                            <action selector="onResetPass:" destination="ZbS-PR-qst" eventType="touchUpInside" id="fbL-YP-7g2"/>
+                                            <action selector="onResetPass:" destination="ZbS-PR-qst" eventType="touchUpInside" id="uY8-Ft-CXU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9R-BZ-QbU">
@@ -291,6 +291,7 @@
                         <outlet property="loginGG" destination="wLw-Tc-O9L" id="Uzh-UZ-Rem"/>
                         <outlet property="passwordTextField" destination="M7L-PZ-016" id="P72-2X-pgQ"/>
                         <outlet property="registerButton" destination="y6s-T0-gBA" id="kx6-eh-KKu"/>
+                        <outlet property="resetPasswordButton" destination="FEX-DG-aJE" id="jeE-7c-fr4"/>
                         <segue destination="pzB-yh-K0C" kind="presentation" identifier="RootView" id="FaM-WZ-Z2p"/>
                     </connections>
                 </viewController>

@@ -20,6 +20,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate,GIDSignInDelega
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginFB: UIButton!
     @IBOutlet weak var loginGG: UIButton!
+    @IBOutlet weak var resetPasswordButton: UIButton!
     let signinGG = GIDSignIn()
     var databaseRef: FIRDatabaseReference!
     override func viewDidLoad() {
