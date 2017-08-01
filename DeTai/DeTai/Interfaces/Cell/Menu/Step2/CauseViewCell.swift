@@ -61,7 +61,7 @@ class CauseViewCell: UITableViewCell {
     }
     
     func Create(numberButton: Int) {
-        let x = self.contentView.frame.origin.x + 20
+        let x = self.contentView.frame.origin.x + 50
         var y = lbYte.bounds.height + lbNDNN.bounds.height + lbNDTGQ.bounds.height + 250
         button.removeAll()
         for i in 0..<numberButton {

@@ -62,11 +62,11 @@ class Dianose2ViewCell: UITableViewCell {
     }
     
     func Create(numberButton: Int) {
-        let x = viewDianose.frame.origin.x + 20
+        let x = viewDianose.frame.origin.x + 30
         var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 120
         button.removeAll()
         for i in 0..<numberButton {
-            let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 220 , height: 50))
+            let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 240 , height: 50))
             initButton(_button: button, _title: titleButton[i])
             y += 60
         }

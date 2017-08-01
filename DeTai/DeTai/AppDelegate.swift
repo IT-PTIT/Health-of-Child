@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Realm
+import RealmSwift
 //import FBSDKCoreKit
 
 @UIApplicationMain
@@ -21,6 +23,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         // Override point for customization after application launch.
         //FirebaseApp.configure()
+        
+        
+        // add realm 
+        
+        var defaultRealmURL: URL? = RLMRealmConfiguration.default().fileURL
+        var defaultRealmParentURL: URL? = defaultRealmURL?.deletingLastPathComponent()
+        var v0URL: URL? = Bundle.main.url(forResource: "default", withExtension: "realm")
+        try? FileManager.default.removeItem(at: defaultRealmURL!)
+        try? FileManager.default.copyItem(at: v0URL!, to: defaultRealmURL!)
+        // trying to open an outdated realm file without first registering a new schema version and migration block
+        // with throw
+        defer {
+        }
+        do {
+            RLMRealm.default()
+        } catch _ {
+            print("Trying to open an outdated realm a migration block threw an exception.")
+        }
         
         return true
     }
