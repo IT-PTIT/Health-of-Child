@@ -39,7 +39,7 @@ class ChuanDoanBaseDataStore : NSObject
         return self.CauTraLoi
     }
     
-    func saveObject(SheetObject s: TRIEUCHUNG)     {
+    func saveObject(SheetObject s: CAUHOI)     {
         try! realm.write {
             realm.add(s) // Add object vao Data base, bang Sheet 1
         }

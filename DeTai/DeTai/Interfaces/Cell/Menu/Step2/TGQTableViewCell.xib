@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TGQTableViewCell" id="KGk-i7-Jjw" customClass="TGQTableViewCell" customModule="DeTai" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="657"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="353" height="657"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEQ-mn-Bh9" customClass="TGQ">
+                        <rect key="frame" x="8" y="320.5" width="337" height="326"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x1w-kG-VJ7">
+                        <rect key="frame" x="59" y="30" width="235" height="282.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="x1w-kG-VJ7" secondAttribute="height" multiplier="1:1.2" id="Ty6-gI-JIb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="x1w-kG-VJ7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="0oO-XU-Wo0"/>
+                    <constraint firstItem="kEQ-mn-Bh9" firstAttribute="top" secondItem="x1w-kG-VJ7" secondAttribute="bottom" constant="8" id="9YG-Xh-WVg"/>
+                    <constraint firstItem="x1w-kG-VJ7" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:1.5" id="faw-E8-rMf"/>
+                    <constraint firstItem="kEQ-mn-Bh9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="j68-i6-tfa"/>
+                    <constraint firstAttribute="trailing" secondItem="kEQ-mn-Bh9" secondAttribute="trailing" constant="8" id="pzC-aM-9ua"/>
+                    <constraint firstItem="x1w-kG-VJ7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xRg-SR-ytB"/>
+                    <constraint firstAttribute="bottom" secondItem="kEQ-mn-Bh9" secondAttribute="bottom" constant="10" id="yDf-x1-GiI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imgTGQ" destination="x1w-kG-VJ7" id="DZi-Hu-bf6"/>
+                <outlet property="lbNoiDung" destination="kEQ-mn-Bh9" id="0E0-jD-ZoY"/>
+            </connections>
+            <point key="canvasLocation" x="62.5" y="311.5"/>
+        </tableViewCell>
+    </objects>
+</document>

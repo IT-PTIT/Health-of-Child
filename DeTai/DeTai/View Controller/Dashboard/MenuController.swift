@@ -25,7 +25,7 @@ class MenuController: UIViewController {
     var listMenu3 = [TRIEUCHUNG]()
     var numberSection = [String]()
     var index = 0
-// h o day a goi class kia qua dc ko?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Danh Sách"
