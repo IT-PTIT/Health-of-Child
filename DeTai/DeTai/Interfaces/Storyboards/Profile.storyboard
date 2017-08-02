@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" secondItem="WvC-TZ-BPx" secondAttribute="height" multiplier="15:8" id="jMV-gD-3qX"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPu-3x-AqJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPu-3x-AqJ">
                                 <rect key="frame" x="123" y="168" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="128" id="3tA-1J-o4u"/>
@@ -213,18 +213,35 @@
                                     <constraint firstItem="dHC-1o-0e6" firstAttribute="top" secondItem="q0c-U6-WLj" secondAttribute="bottom" constant="16" id="uYi-Oq-8f4"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBp-qp-3TC">
+                                <rect key="frame" x="259" y="272" width="76" height="30"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.32549019607843138" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="PgR-I7-gFz"/>
+                                    <constraint firstAttribute="height" constant="30" id="TKM-W3-WBn"/>
+                                </constraints>
+                                <state key="normal" title="save photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSavePhoto:" destination="n9r-Zf-h8p" eventType="touchUpInside" id="qgr-zO-31Q"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.96114961350299466" blue="0.95097626348192632" alpha="0.69656999143835618" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.72282091492588163" green="0.91938380678460208" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="mI2-A7-cJe" firstAttribute="top" secondItem="zz4-3e-5lf" secondAttribute="bottom" constant="16" id="9aB-TR-Qoh"/>
+                            <constraint firstAttribute="trailing" secondItem="oBp-qp-3TC" secondAttribute="trailing" constant="40" id="BjK-WE-G4L"/>
                             <constraint firstItem="zz4-3e-5lf" firstAttribute="leading" secondItem="5v2-EQ-1Hd" secondAttribute="leadingMargin" constant="107" id="IKP-bj-GCS"/>
                             <constraint firstItem="KPu-3x-AqJ" firstAttribute="top" secondItem="iM4-fQ-EIu" secondAttribute="bottom" constant="104" id="LE8-xk-xia"/>
                             <constraint firstAttribute="trailing" secondItem="Fzd-ib-iy1" secondAttribute="trailing" id="NBl-pM-X0d"/>
                             <constraint firstItem="Fzd-ib-iy1" firstAttribute="top" secondItem="KPu-3x-AqJ" secondAttribute="bottom" constant="8" id="OWd-9u-LUP"/>
                             <constraint firstAttribute="trailing" secondItem="WvC-TZ-BPx" secondAttribute="trailing" id="QZH-Gb-Q4b"/>
                             <constraint firstItem="Fzd-ib-iy1" firstAttribute="top" secondItem="zz4-3e-5lf" secondAttribute="bottom" constant="8" id="Rjb-gM-vZm"/>
+                            <constraint firstItem="oBp-qp-3TC" firstAttribute="leading" secondItem="zz4-3e-5lf" secondAttribute="trailing" constant="8" id="Yet-7D-CFt"/>
                             <constraint firstItem="8lh-t3-h0O" firstAttribute="top" secondItem="Fzd-ib-iy1" secondAttribute="bottom" id="ZRG-vr-D29"/>
                             <constraint firstItem="WvC-TZ-BPx" firstAttribute="top" secondItem="iM4-fQ-EIu" secondAttribute="bottom" id="aD6-7Y-rub"/>
+                            <constraint firstItem="oBp-qp-3TC" firstAttribute="top" secondItem="WvC-TZ-BPx" secondAttribute="bottom" constant="8" id="hVi-rI-GMa"/>
                             <constraint firstItem="WvC-TZ-BPx" firstAttribute="leading" secondItem="5v2-EQ-1Hd" secondAttribute="leading" id="jZ7-yX-P8N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KPu-3x-AqJ" secondAttribute="trailing" constant="108" id="jrd-I3-4H5"/>
                             <constraint firstItem="KPu-3x-AqJ" firstAttribute="leading" secondItem="5v2-EQ-1Hd" secondAttribute="leadingMargin" constant="107" id="kDI-wS-jf8"/>
@@ -248,6 +265,7 @@
                         <outlet property="nicknameLabel" destination="Zj3-Lo-Z9B" id="6am-yW-MR4"/>
                         <outlet property="numberphoneLabel" destination="avo-ez-8rS" id="0pq-NJ-UYw"/>
                         <outlet property="profileImage" destination="KPu-3x-AqJ" id="tsf-ZP-VQZ"/>
+                        <outlet property="savephotoButton" destination="oBp-qp-3TC" id="xk3-H2-Xcd"/>
                         <outlet property="updateInfoPSNButton" destination="mSo-pU-hK1" id="wDN-i3-Ha2"/>
                         <outlet property="usernameLabel" destination="mI2-A7-cJe" id="BVS-4c-yK7"/>
                     </connections>
@@ -348,6 +366,9 @@
                                         <state key="normal" title="Save" image="check">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSave:" destination="F18-Js-BbU" eventType="touchUpInside" id="eAY-qz-uvq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK7-8V-NGh">
                                         <rect key="frame" x="215" y="435" width="80" height="32"/>
@@ -356,6 +377,9 @@
                                         <state key="normal" title="Cancel" image="cancel">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCancel:" destination="F18-Js-BbU" eventType="touchUpInside" id="AFw-ux-w3e"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-lT-Hvl">
                                         <rect key="frame" x="122" y="291" width="233" height="30"/>
@@ -424,6 +448,15 @@
                             <constraint firstItem="Hfs-AS-Zc3" firstAttribute="top" secondItem="XAJ-Se-8eh" secondAttribute="bottom" id="zDK-jy-bIY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="Zqu-lT-Hvl" id="T5Y-Sd-uW3"/>
+                        <outlet property="cancelButton" destination="EK7-8V-NGh" id="oij-Ja-0aA"/>
+                        <outlet property="emailTextField" destination="Ih5-Mh-ULX" id="Ibz-hP-94o"/>
+                        <outlet property="nicknameTextField" destination="4ax-DZ-rb3" id="5uf-kU-6uX"/>
+                        <outlet property="numberphoneTextField" destination="Cxe-yx-W6d" id="rRp-Sa-NyR"/>
+                        <outlet property="saveInfoButton" destination="1tC-Aq-i2d" id="JJe-DJ-EKU"/>
+                        <outlet property="usernameTextField" destination="OyI-nH-hQa" id="EfD-A6-86A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXR-wk-rce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

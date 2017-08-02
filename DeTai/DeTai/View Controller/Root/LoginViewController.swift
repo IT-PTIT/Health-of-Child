@@ -157,7 +157,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate,GIDSignInDelega
 
     }
     
-    @IBAction func onResetPass(_ sender: Any) {
+    @IBAction func onResetPassPresent(_ sender: Any) {
         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "IDResetPasswordViewController") as! ResetPasswordViewController
         self.present(myVC, animated: true, completion: nil)
     }

@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var changeImageButton: UIButton!
+    @IBOutlet weak var savephotoButton: UIButton!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -23,27 +24,32 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
     @IBOutlet weak var updateInfoPSNButton: UIButton!
     
     let databaseRef = FIRDatabase.database().reference()
+    let storedImageRef = FIRStorage.storage().reference()
+    let uid = FIRAuth.auth()?.currentUser?.uid
    // var userJSON = [user_profile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        savephotoButton.isHidden = true
         title = RootTab.profileTab.title
-        loadData()
+       
             }
     override func viewDidAppear(_ animated: Bool) {
+        loadData()
+
+        savephotoButton.layer.cornerRadius = 5.0
         updateInfoPSNButton.layer.cornerRadius = 5.0
-        profileImage.layer.cornerRadius = profileImage.frame.size.width/2.0
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        profileImage.layer.masksToBounds = true
         profileImage.clipsToBounds = true
     }
     @IBAction func onLogout(_ sender: Any) {
         if GIDSignIn.sharedInstance().hasAuthInKeychain() == true {
-            GIDSignIn.sharedInstance().signOut()
+            try! GIDSignIn.sharedInstance().signOut()
             print("Logout success")
                 dismiss(animated: true, completion: nil)
         }else if FBSDKAccessToken.current() != nil || FIRAuth.auth()?.currentUser != nil{
-           try! FIRAuth.auth()?.signOut()
-                
+           try! FIRAuth.auth()!.signOut()
                 dismiss(animated: true, completion: nil)
             print("Logout success")
         }
@@ -60,6 +66,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
         imgPicker.allowsEditing = true
         imgPicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         self.present(imgPicker, animated: true, completion: nil)
+        
+            savephotoButton.isHidden = false
+    }
+    @IBAction func onSavePhoto(_ sender: Any) {
+        saveChange()
+        savephotoButton.isHidden = true
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var selectedImgfromPicker: UIImage?
@@ -79,10 +91,34 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
         dismiss(animated: true, completion: nil)
     }
     func saveChange(){
-       
+       let imageName = NSUUID().uuidString
+        let storedImage = storedImageRef.child("profile_image").child(imageName)
+        if let uploadData = UIImagePNGRepresentation(self.profileImage.image!)
+        {
+            storedImage.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error != nil{
+                print(error!)
+                    return
+                }
+                storedImage.downloadURL(completion: { (url, error) in
+                    if error != nil{
+                    print(error!)
+                        return
+                    }
+                    if let urlText = url?.absoluteString{
+                    self.databaseRef.child("user_profiles").child("user").child(self.uid!).updateChildValues(["pic":urlText], withCompletionBlock: { (error, dataref) in
+                        if error != nil{
+                        print(error!)
+                            return
+                        }
+                    })
+                    }
+                })
+            })
+        }
     }
     func loadData(){
-        let uid = FIRAuth.auth()?.currentUser?.uid
+        
         databaseRef.child("user_profiles").child("user").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
             if let userdataJSON = snapshot.value as? [String:Any]{
                 self.usernameLabel.text = userdataJSON["name"] as? String
@@ -91,7 +127,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
                 self.numberphoneLabel.text = userdataJSON["phone"] as? String
                 self.birthdateLabel.text = userdataJSON["birthday"] as? String
                 if let profileImageUrl = userdataJSON["pic"] as? String{
-                let url = URL(string: profileImageUrl)
+                    let url = URL(string: profileImageUrl)
                     URLSession.shared.dataTask(with: url!, completionHandler: { (data, respone, error) in
                         if error != nil{
                         print(error!)
@@ -100,7 +136,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate,U
                         DispatchQueue.main.async {
                             self.profileImage.image = UIImage(data: data!)
                         }
-                    })
+                    }).resume()
                 }
             }
         })
