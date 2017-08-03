@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dna-Qu-giu">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dna-Qu-giu">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,24 +19,101 @@
                         <viewControllerLayoutGuide type="bottom" id="A1c-l5-VgQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3f4-Qf-SOf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Js-sd-Q7b">
-                                <rect key="frame" x="92" y="240" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lbl-p9-Su9">
+                                <rect key="frame" x="0.0" y="64" width="320" height="284"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bw0-hW-Fck" id="OBV-UZ-txJ"/>
+                                </connections>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-bf-7sb">
+                                <rect key="frame" x="0.0" y="348" width="320" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" rowHeight="59" id="kOj-wT-qme" customClass="MapCell" customModule="DeTai" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kOj-wT-qme" id="2KJ-9w-eOP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phj-SN-zAa">
+                                                    <rect key="frame" x="52" y="0.0" width="268" height="58.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hospital_location-512" translatesAutoresizingMaskIntoConstraints="NO" id="sm2-Hj-ChK">
+                                                    <rect key="frame" x="10" y="15" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.9045555591583252" green="0.97203010320663452" blue="0.95928734540939331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgHospital" destination="sm2-Hj-ChK" id="seQ-TO-mpu"/>
+                                            <outlet property="lblName" destination="Phj-SN-zAa" id="HGL-kd-uRR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYt-Ix-PnB">
+                                <rect key="frame" x="270" y="305" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FUY-TT-Ti1"/>
+                                    <constraint firstAttribute="height" constant="40" id="Nxo-ig-Bl2"/>
+                                </constraints>
+                                <state key="normal" image="Find4"/>
+                                <connections>
+                                    <action selector="btnFind:" destination="bw0-hW-Fck" eventType="touchUpInside" id="cWI-tq-8jA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lbl-p9-Su9" secondAttribute="trailing" id="805-Yp-K2O"/>
+                            <constraint firstItem="Lbl-p9-Su9" firstAttribute="leading" secondItem="3f4-Qf-SOf" secondAttribute="leading" id="9tl-Tv-OKX"/>
+                            <constraint firstItem="A1c-l5-VgQ" firstAttribute="top" secondItem="uUX-bf-7sb" secondAttribute="bottom" id="DrK-0K-bcm"/>
+                            <constraint firstAttribute="trailing" secondItem="DYt-Ix-PnB" secondAttribute="trailing" constant="10" id="LSh-Aw-9qI"/>
+                            <constraint firstItem="uUX-bf-7sb" firstAttribute="top" secondItem="Lbl-p9-Su9" secondAttribute="bottom" id="N00-Y9-uak"/>
+                            <constraint firstItem="uUX-bf-7sb" firstAttribute="leading" secondItem="3f4-Qf-SOf" secondAttribute="leading" id="WHB-Cr-brj"/>
+                            <constraint firstItem="uUX-bf-7sb" firstAttribute="top" secondItem="DYt-Ix-PnB" secondAttribute="bottom" constant="3" id="dI7-uz-QOj"/>
+                            <constraint firstItem="Lbl-p9-Su9" firstAttribute="top" secondItem="a9u-NP-gJa" secondAttribute="bottom" id="iIs-bi-nNc"/>
+                            <constraint firstAttribute="trailing" secondItem="uUX-bf-7sb" secondAttribute="trailing" id="mTX-xi-WZI"/>
+                            <constraint firstItem="Lbl-p9-Su9" firstAttribute="height" secondItem="3f4-Qf-SOf" secondAttribute="height" multiplier="1:2" id="nQ0-ei-BXd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9eS-zR-E2V"/>
+                    <connections>
+                        <outlet property="mapCurrent" destination="Lbl-p9-Su9" id="4vj-6i-pQt"/>
+                        <outlet property="tbvHospital" destination="uUX-bf-7sb" id="9hI-sS-Y9b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOR-tb-IDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1108" y="98.50074962518741"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c7c-Qd-wYO">
+            <objects>
+                <viewController id="wB9-Bk-IM4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="olt-pi-Yxj"/>
+                        <viewControllerLayoutGuide type="bottom" id="5CK-Pi-2Ce"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JhQ-sC-xfo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VTa-jS-FvC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRK-6D-8fW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3211.875" y="111.97183098591549"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="upM-86-JoG">
@@ -55,5 +133,27 @@
             </objects>
             <point key="canvasLocation" x="168.80000000000001" y="98.50074962518741"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rx3-oB-bXf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qeq-Dy-Bxk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WEd-2K-xzy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wB9-Bk-IM4" kind="relationship" relationship="rootViewController" id="UXd-Ui-Nho"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ekg-a7-ix9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214.375" y="111.97183098591549"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Find4" width="256" height="256"/>
+        <image name="hospital_location-512" width="512" height="512"/>
+    </resources>
 </document>
