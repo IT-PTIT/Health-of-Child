@@ -94,27 +94,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="caj-b3-OoT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a3T-8s-cqM" firstAttribute="top" secondItem="caj-b3-OoT" secondAttribute="bottom" id="0xK-yd-nL4"/>
-                            <constraint firstItem="caj-b3-OoT" firstAttribute="top" secondItem="cBd-lO-4fy" secondAttribute="bottom" id="LP4-ys-0N3"/>
                             <constraint firstItem="caj-b3-OoT" firstAttribute="leading" secondItem="9Nn-kz-azP" secondAttribute="leading" id="NKu-aj-33h"/>
-                            <constraint firstItem="cBd-lO-4fy" firstAttribute="leading" secondItem="9Nn-kz-azP" secondAttribute="leading" id="Pkx-tD-G7q"/>
+                            <constraint firstItem="caj-b3-OoT" firstAttribute="top" secondItem="kwK-Na-Zdg" secondAttribute="bottom" id="fLK-Ta-zkt"/>
                             <constraint firstAttribute="trailing" secondItem="caj-b3-OoT" secondAttribute="trailing" id="i1r-9f-71W"/>
                             <constraint firstItem="a3T-8s-cqM" firstAttribute="top" secondItem="caj-b3-OoT" secondAttribute="bottom" id="igO-dH-bgD"/>
-                            <constraint firstAttribute="trailing" secondItem="cBd-lO-4fy" secondAttribute="trailing" id="lae-Va-oME"/>
                             <constraint firstItem="caj-b3-OoT" firstAttribute="leading" secondItem="9Nn-kz-azP" secondAttribute="leading" id="nFI-DB-v6A"/>
-                            <constraint firstItem="caj-b3-OoT" firstAttribute="top" secondItem="cBd-lO-4fy" secondAttribute="bottom" id="oD3-2C-OXs"/>
-                            <constraint firstItem="cBd-lO-4fy" firstAttribute="top" secondItem="kwK-Na-Zdg" secondAttribute="bottom" id="pea-ZD-wsL"/>
                             <constraint firstAttribute="trailing" secondItem="caj-b3-OoT" secondAttribute="trailing" id="qfu-4m-COs"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBenh" destination="cBd-lO-4fy" id="Mqk-b6-Bvh"/>
                         <outlet property="tbvMenu" destination="caj-b3-OoT" id="pzd-2u-ANb"/>
                     </connections>
                 </viewController>
