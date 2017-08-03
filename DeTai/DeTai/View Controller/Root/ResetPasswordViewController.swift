@@ -26,6 +26,9 @@ class ResetPasswordViewController: UIViewController {
         resetPasswordButton.layer.cornerRadius = 5.0
         cancelButton.layer.cornerRadius = 5.0
     }
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
