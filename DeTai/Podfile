@@ -5,8 +5,18 @@ target 'DeTai' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-	pod ‘RealmSwift’
+	pod 'RealmSwift'
     pod 'Firebase/Core'
+    pod 'SVProgressHUD'
+    pod 'RealmSwift'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    pod 'Google/SignIn'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
 
   # Pods for DeTai
 

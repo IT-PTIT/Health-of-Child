@@ -38,7 +38,7 @@
 		5B37C1581F2BEC8400B87832 /* CauseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37C1571F2BEC8400B87832 /* CauseViewController.swift */; };
 		5B37C15A1F2BEDAD00B87832 /* CauseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */; };
 		5B37C15C1F2BEDC300B87832 /* CauseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */; };
-		5B53F8B11F27860700BC2014 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B53F8B01F27860700BC2014 /* GoogleService-Info-2.plist */; };
+		5B53F8B11F27860700BC2014 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */; };
 		5B5886AA1F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5886A91F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift */; };
 		5B8D09811F2DD5430033346D /* NNBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09801F2DD5430033346D /* NNBaseDataStore.swift */; };
 		5B8D098A1F2DE43E0033346D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09891F2DE43E0033346D /* Categories.swift */; };
@@ -64,6 +64,9 @@
 		7ED6E23C1F30873100458C5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED6E23B1F30873100458C5B /* CoreLocation.framework */; };
 		B7EDFDC6EBD2F5E0CAB14A03 /* Pods_DeTaiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */; };
 		D282E71FB2B6F7323A89FCEE /* Pods_DeTaiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513DAF9E70BAE4D57320A0F8 /* Pods_DeTaiTests.framework */; };
+		FE537DF71F332A5000781BD2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DF61F332A5000781BD2 /* RegisterViewController.swift */; };
+		FE537DF91F332A6C00781BD2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DF81F332A6C00781BD2 /* ResetPasswordViewController.swift */; };
+		FE537DFB1F332A9000781BD2 /* UpdateInfoPSNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE537DFA1F332A9000781BD2 /* UpdateInfoPSNViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +122,7 @@
 		5B37C1571F2BEC8400B87832 /* CauseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseViewController.swift; sourceTree = "<group>"; };
 		5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseViewCell.swift; sourceTree = "<group>"; };
 		5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CauseViewCell.xib; sourceTree = "<group>"; };
-		5B53F8B01F27860700BC2014 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B5886A91F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieuChungBaseDataStore.swift; sourceTree = "<group>"; };
 		5B8D09801F2DD5430033346D /* NNBaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNBaseDataStore.swift; sourceTree = "<group>"; };
 		5B8D09891F2DE43E0033346D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -154,6 +157,9 @@
 		9FF03BF67F3D10958E986CD6 /* Pods-DeTaiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTaiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DeTaiUITests/Pods-DeTaiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7D97E824A58DF009972D8B9 /* Pods_DeTaiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTaiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EB14177A41CD02E821C6EE /* Pods_DeTai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeTai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE537DF61F332A5000781BD2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FE537DF81F332A6C00781BD2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		FE537DFA1F332A9000781BD2 /* UpdateInfoPSNViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoPSNViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,8 @@
 			children = (
 				41B629641F1A952F00ACF83E /* RootViewController.swift */,
 				41B629811F1AA46A00ACF83E /* LoginViewController.swift */,
+				FE537DF61F332A5000781BD2 /* RegisterViewController.swift */,
+				FE537DF81F332A6C00781BD2 /* ResetPasswordViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				41B6297F1F1A9D1800ACF83E /* ProfileViewController.swift */,
+				FE537DFA1F332A9000781BD2 /* UpdateInfoPSNViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -441,7 +450,7 @@
 				5BED28BF1F30ED4B00F259ED /* default.realm */,
 				5BD6D5721EC83AC90034A40A /* AppDelegate.swift */,
 				5BD6D5791EC83AC90034A40A /* Assets.xcassets */,
-				5B53F8B01F27860700BC2014 /* GoogleService-Info-2.plist */,
+				5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */,
 				5BD6D57E1EC83AC90034A40A /* Info.plist */,
 			);
 			path = DeTai;
@@ -613,7 +622,7 @@
 				5BB3A0B81F265267006E7CFA /* MenuCell.xib in Resources */,
 				5BD6D57A1EC83AC90034A40A /* Assets.xcassets in Resources */,
 				5B37C15C1F2BEDC300B87832 /* CauseViewCell.xib in Resources */,
-				5B53F8B11F27860700BC2014 /* GoogleService-Info-2.plist in Resources */,
+				5B53F8B11F27860700BC2014 /* GoogleService-Info.plist in Resources */,
 				41B6296B1F1A977F00ACF83E /* Dashboard.storyboard in Resources */,
 				41B629711F1A97B500ACF83E /* Profile.storyboard in Resources */,
 				41B629621F1A94BD00ACF83E /* Main.storyboard in Resources */,
@@ -786,6 +795,7 @@
 				5B8D09941F2DE4480033346D /* BENH.swift in Sources */,
 				5B0C957E1F2BC5C4002BC2D3 /* ChuanDoanBaseDataStore.swift in Sources */,
 				5B28F07C1F2E2869007A3F1D /* TGQTableViewCell.swift in Sources */,
+				FE537DFB1F332A9000781BD2 /* UpdateInfoPSNViewController.swift in Sources */,
 				5B0C956F1F2B880A002BC2D3 /* DiagnoseCell.swift in Sources */,
 				5B11CE691F1E6B9D00971EBD /* HomeCell.swift in Sources */,
 				5B0C95781F2BA857002BC2D3 /* Diagnose2ViewController.swift in Sources */,
@@ -796,6 +806,7 @@
 				5B37C1581F2BEC8400B87832 /* CauseViewController.swift in Sources */,
 				5B181F641F1F61AF001D797C /* MenuController.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
+				FE537DF71F332A5000781BD2 /* RegisterViewController.swift in Sources */,
 				5B8D09951F2DE4480033346D /* CAUHOI.swift in Sources */,
 				41B629801F1A9D1800ACF83E /* ProfileViewController.swift in Sources */,
 				5B8D099D1F2DF09D0033346D /* TGQBaseDataStore.swift in Sources */,
@@ -806,6 +817,7 @@
 				5B0C95761F2BA839002BC2D3 /* DiagnoseViewController.swift in Sources */,
 				5B8D09811F2DD5430033346D /* NNBaseDataStore.swift in Sources */,
 				5B8D099B1F2DE4480033346D /* TUGIAIQUYET.swift in Sources */,
+				FE537DF91F332A6C00781BD2 /* ResetPasswordViewController.swift in Sources */,
 				41B6297E1F1A9D0D00ACF83E /* LocationViewController.swift in Sources */,
 				5B0C957A1F2BA886002BC2D3 /* Dianose2ViewCell.swift in Sources */,
 				41B6297C1F1A9CFF00ACF83E /* InboxViewController.swift in Sources */,
