@@ -20,14 +20,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="446" height="718"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baby-crying-icon" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-Nv-e87">
-                        <rect key="frame" x="111.5" y="20" width="223" height="267.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="mJX-Nv-e87" secondAttribute="height" multiplier="1:1.2" id="sV8-OI-CA9"/>
-                        </constraints>
-                    </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlV-Ve-eMJ">
-                        <rect key="frame" x="37" y="297.5" width="372" height="332"/>
+                        <rect key="frame" x="37" y="267.5" width="372" height="362"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmC-69-pDX">
                                 <rect key="frame" x="8" y="30" width="356" height="20.5"/>
@@ -56,6 +50,12 @@
                             <action selector="BackAction:" destination="nXV-oh-tbJ" eventType="touchUpInside" id="DcU-rB-LVN"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-Nv-e87">
+                        <rect key="frame" x="112" y="0.0" width="223" height="267.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mJX-Nv-e87" secondAttribute="height" multiplier="1:1.2" id="sV8-OI-CA9"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="KlV-Ve-eMJ" firstAttribute="width" secondItem="Z9f-2i-Tfd" secondAttribute="width" multiplier="1:1.2" id="8YM-9u-PRB"/>
@@ -64,8 +64,8 @@
                     <constraint firstAttribute="bottom" secondItem="OlV-1M-twb" secondAttribute="bottom" constant="20" id="Pbo-rS-yae"/>
                     <constraint firstItem="OlV-1M-twb" firstAttribute="top" secondItem="KlV-Ve-eMJ" secondAttribute="bottom" constant="20" id="bdm-Wj-PZy"/>
                     <constraint firstItem="mJX-Nv-e87" firstAttribute="centerX" secondItem="Z9f-2i-Tfd" secondAttribute="centerX" id="exb-ge-JSC"/>
-                    <constraint firstItem="KlV-Ve-eMJ" firstAttribute="top" secondItem="mJX-Nv-e87" secondAttribute="bottom" constant="10" id="g0T-7a-fJn"/>
-                    <constraint firstItem="mJX-Nv-e87" firstAttribute="top" secondItem="Z9f-2i-Tfd" secondAttribute="top" constant="20" id="gJX-pw-HnD"/>
+                    <constraint firstItem="KlV-Ve-eMJ" firstAttribute="top" secondItem="mJX-Nv-e87" secondAttribute="bottom" id="g0T-7a-fJn"/>
+                    <constraint firstItem="mJX-Nv-e87" firstAttribute="top" secondItem="Z9f-2i-Tfd" secondAttribute="top" id="gJX-pw-HnD"/>
                     <constraint firstItem="mJX-Nv-e87" firstAttribute="width" secondItem="Z9f-2i-Tfd" secondAttribute="width" multiplier="1:2" id="iD3-lx-BRB"/>
                 </constraints>
             </tableViewCellContentView>
@@ -79,7 +79,4 @@
             <point key="canvasLocation" x="42" y="297"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="baby-crying-icon" width="256" height="256"/>
-    </resources>
 </document>

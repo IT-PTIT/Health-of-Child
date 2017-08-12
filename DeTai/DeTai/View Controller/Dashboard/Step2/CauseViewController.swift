@@ -24,7 +24,8 @@ class CauseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.backBarButtonItem?.title = ""
+        title = "Kết Quả"
         // Do any additional setup after loading the view.
         CauseViewCell.registerWith(tblView: tbvCause)
         tbvCause.delegate = self

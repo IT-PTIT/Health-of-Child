@@ -36,6 +36,9 @@ class Dianose2ViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let arImage = [#imageLiteral(resourceName: "6"), #imageLiteral(resourceName: "7"), #imageLiteral(resourceName: "8"), #imageLiteral(resourceName: "9"), #imageLiteral(resourceName: "10"), #imageLiteral(resourceName: "11"),#imageLiteral(resourceName: "12")]
+        let randomIndex = Int(arc4random_uniform(UInt32(arImage.count)))
+        imageBaby.image = arImage[randomIndex]
         setupCell()
     }
     
@@ -63,7 +66,7 @@ class Dianose2ViewCell: UITableViewCell {
     
     func Create(numberButton: Int) {
         let x = viewDianose.frame.origin.x + 30
-        var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 120
+        var y = imageBaby.bounds.width * 1.2 + lbCauHoi.bounds.height + 60
         button.removeAll()
         for i in 0..<numberButton {
             let button = UIButton(frame: CGRect (x: Int(x), y: Int(y), width: 240 , height: 50))

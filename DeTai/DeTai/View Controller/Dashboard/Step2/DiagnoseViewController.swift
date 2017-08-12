@@ -24,7 +24,8 @@ class DiagnoseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        title = "CHUẨN ĐOÁN"
+        self.navigationItem.backBarButtonItem?.title = ""
+        title = "Chẩn Đoán"
         DiagnoseCell.registerWith(tblView: tbvDiagnose)
         tbvDiagnose.delegate = self
         tbvDiagnose.dataSource = self

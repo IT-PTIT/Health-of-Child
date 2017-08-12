@@ -13,6 +13,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - Presentr (1.2.3)
   - Realm (2.6.1):
     - Realm/Headers (= 2.6.1)
   - Realm/Headers (2.6.1)
@@ -21,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase/Core
+  - Presentr
   - RealmSwift
 
 SPEC CHECKSUMS:
@@ -29,9 +31,10 @@ SPEC CHECKSUMS:
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  Presentr: a21c7bbb3532c8ff60320e235c0a4869e72f8885
   Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
   RealmSwift: a54d3e8931cf7d3afa5a1fac9c8f88109d7f02b3
 
-PODFILE CHECKSUM: c68c5342f16ce06e7b844170834ff1199fa8ee96
+PODFILE CHECKSUM: b836b38b5e191518b025b9a9e70ae5102b723dd6
 
 COCOAPODS: 1.2.1

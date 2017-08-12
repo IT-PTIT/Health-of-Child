@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Presentr
 
 class Diagnose2ViewController: UIViewController {
 
@@ -15,6 +16,13 @@ class Diagnose2ViewController: UIViewController {
         let newVC = storyBoard.instantiateViewController(withIdentifier: "Diagnose2ViewController") as! Diagnose2ViewController
         return newVC
     }
+    
+    // lib Presentr
+    let presenter: Presentr = {
+        let presenter = Presentr(presentationType: .alert)
+        presenter.transitionType = TransitionType.coverHorizontalFromRight
+        return presenter
+    }()
     
     @IBOutlet weak var tbvChuanDoan2: UITableView!
     
@@ -28,7 +36,8 @@ class Diagnose2ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
+        self.navigationItem.backBarButtonItem?.title = ""
+        title = "Chẩn Đoán"
         Dianose2ViewCell.registerWith(tblView: tbvChuanDoan2)
         loadData(maCHDT: MaCHDT!)
         tbvChuanDoan2.delegate = self
@@ -91,7 +100,15 @@ extension Diagnose2ViewController: Dianose2ViewCellDelegate {
                 self.navigationController?.pushViewController(newVC, animated: true)
             }
         } else if TT == "1" {
+            presenter.presentationType = .custom(width: ModalSize.custom(size: Float(self.view.frame.size.width) - 82.0), height: ModalSize.custom(size: 160), center: .center)
             
+            presenter.transitionType = nil
+            presenter.dismissTransitionType = nil
+            
+            presenter.keyboardTranslationType = .compress
+            let newVC = KQArlert.newVC(storyBoard: self.storyboard!)
+            newVC.loadData(MaNN: maNN)
+            customPresentViewController(presenter, viewController: newVC, animated: true, completion: nil)
         }else if TT == "2" {
             let backVC = DiagnoseViewController.newVC(storyBoard: self.storyboard!)
             backVC.loadTC(MaTC: maCH)
