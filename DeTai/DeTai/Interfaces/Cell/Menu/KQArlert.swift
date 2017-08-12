@@ -44,9 +44,19 @@ class KQArlert: UIViewController {
     }
     
     @IBAction func OK(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
-        let homeVC = storyboard.instantiateInitialViewController() as! UINavigationController
-        self.present(homeVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "IDRootViewController") as! RootViewController
+        controller.selectedIndex = 2
+        self.present(controller, animated: true, completion: nil)
+        
+        
+//        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "IDRootViewController") as! RootViewController
+        print("Login success!")
+//        controller.selectedIndex = 2
+//        self.present(controller, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "Dashboard", bundle: nil)
+//        let homeVC = storyboard.instantiateInitialViewController() as! UINavigationController
+//        self.present(homeVC, animated: true, completion: nil)
     }
     
 }

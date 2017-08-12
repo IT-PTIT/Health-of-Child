@@ -111,6 +111,7 @@ class RootViewController: UITabBarController {
             controller.tabBarItem = RootTabBarItem(tab: $0)
             return controller
         }
+        self.selectedIndex = 2
         
         // Do any additional setup after loading the view.
     }
