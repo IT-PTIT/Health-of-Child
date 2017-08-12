@@ -58,13 +58,14 @@
 		5B8D099A1F2DE4480033346D /* TRIEUCHUNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09921F2DE4480033346D /* TRIEUCHUNG.swift */; };
 		5B8D099B1F2DE4480033346D /* TUGIAIQUYET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09931F2DE4480033346D /* TUGIAIQUYET.swift */; };
 		5B8D099D1F2DF09D0033346D /* TGQBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D099C1F2DF09D0033346D /* TGQBaseDataStore.swift */; };
+		5B97BD0E1F3E29D900D883DE /* KQArlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B97BD0D1F3E29D900D883DE /* KQArlert.swift */; };
 		5BB3A0B61F265256006E7CFA /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB3A0B51F265256006E7CFA /* MenuTableViewCell.swift */; };
 		5BB3A0B81F265267006E7CFA /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB3A0B71F265267006E7CFA /* MenuCell.xib */; };
 		5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5721EC83AC90034A40A /* AppDelegate.swift */; };
 		5BD6D57A1EC83AC90034A40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD6D5791EC83AC90034A40A /* Assets.xcassets */; };
 		5BD6D5881EC83AC90034A40A /* DeTaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5871EC83AC90034A40A /* DeTaiTests.swift */; };
 		5BD6D5931EC83AC90034A40A /* DeTaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD6D5921EC83AC90034A40A /* DeTaiUITests.swift */; };
-		5BED28C01F30ED4B00F259ED /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 5BED28BF1F30ED4B00F259ED /* default.realm */; };
+		5BD92EC51F3B537A004EEBD5 /* viemtaigiua.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5BD92EC41F3B537A004EEBD5 /* viemtaigiua.pdf */; };
 		7E36F49A1F30EB43009F2E87 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F4991F30EB43009F2E87 /* MyAnnotation.swift */; };
 		7E36F49C1F30ED7C009F2E87 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F49B1F30ED7C009F2E87 /* MapCell.swift */; };
 		7ED6E23A1F30867C00458C5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED6E2391F30867C00458C5B /* MapKit.framework */; };
@@ -149,6 +150,7 @@
 		5B8D09921F2DE4480033346D /* TRIEUCHUNG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRIEUCHUNG.swift; sourceTree = "<group>"; };
 		5B8D09931F2DE4480033346D /* TUGIAIQUYET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TUGIAIQUYET.swift; sourceTree = "<group>"; };
 		5B8D099C1F2DF09D0033346D /* TGQBaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGQBaseDataStore.swift; sourceTree = "<group>"; };
+		5B97BD0D1F3E29D900D883DE /* KQArlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KQArlert.swift; sourceTree = "<group>"; };
 		5BB3A0B51F265256006E7CFA /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		5BB3A0B71F265267006E7CFA /* MenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		5BD6D56F1EC83AC90034A40A /* DeTai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeTai.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +164,7 @@
 		5BD6D5921EC83AC90034A40A /* DeTaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeTaiUITests.swift; sourceTree = "<group>"; };
 		5BD6D5941EC83AC90034A40A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BD75A791F28EDC100F9AFEC /* RealmConverter.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = RealmConverter.xcworkspace; path = "../../../../Downloads/realm-cocoa-converter-master/RealmConverter.xcworkspace"; sourceTree = "<group>"; };
-		5BED28BF1F30ED4B00F259ED /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		5BD92EC41F3B537A004EEBD5 /* viemtaigiua.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = viemtaigiua.pdf; sourceTree = "<group>"; };
 		72D572A962C33DD485A80856 /* Pods-DeTai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeTai.release.xcconfig"; path = "Pods/Target Support Files/Pods-DeTai/Pods-DeTai.release.xcconfig"; sourceTree = "<group>"; };
 		7E36F4991F30EB43009F2E87 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		7E36F49B1F30ED7C009F2E87 /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 		5B54EF2E1F32FEA100B8E9AD /* FilePDF */ = {
 			isa = PBXGroup;
 			children = (
+				5BD92EC41F3B537A004EEBD5 /* viemtaigiua.pdf */,
 				5B54EF331F33024E00B8E9AD /* Be so sinh.pdf */,
 				5B54EF2F1F32FEB100B8E9AD /* besosinh.pdf */,
 			);
@@ -450,6 +453,7 @@
 				5B0C956B1F2B87AF002BC2D3 /* Step2 */,
 				5BB3A0B51F265256006E7CFA /* MenuTableViewCell.swift */,
 				5BB3A0B71F265267006E7CFA /* MenuCell.xib */,
+				5B97BD0D1F3E29D900D883DE /* KQArlert.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -482,7 +486,6 @@
 				41B6295A1F1A94BD00ACF83E /* Interfaces */,
 				41B629561F1A93EC00ACF83E /* View Controller */,
 				5B1587071F13C09600F0457A /* Model */,
-				5BED28BF1F30ED4B00F259ED /* default.realm */,
 				5BD6D5721EC83AC90034A40A /* AppDelegate.swift */,
 				5B54EF2A1F32E20500B8E9AD /* default.realm */,
 				5BD6D5791EC83AC90034A40A /* Assets.xcassets */,
@@ -649,9 +652,9 @@
 			files = (
 				41B629671F1A975B00ACF83E /* BabyTracker.storyboard in Resources */,
 				5B54EF301F32FEB100B8E9AD /* besosinh.pdf in Resources */,
-				5BED28C01F30ED4B00F259ED /* default.realm in Resources */,
 				5B28F07D1F2E2869007A3F1D /* TGQTableViewCell.xib in Resources */,
 				41B629611F1A94BD00ACF83E /* LaunchScreen.storyboard in Resources */,
+				5BD92EC51F3B537A004EEBD5 /* viemtaigiua.pdf in Resources */,
 				41B629691F1A976C00ACF83E /* Location.storyboard in Resources */,
 				5B54EF2B1F32E20500B8E9AD /* default.realm in Resources */,
 				5B0C957C1F2BA89B002BC2D3 /* Dianose2ViewCell.xib in Resources */,
@@ -884,6 +887,7 @@
 				41B629821F1AA46A00ACF83E /* LoginViewController.swift in Sources */,
 				5B5886AA1F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift in Sources */,
 				5B8D09981F2DE4480033346D /* NN_BENH.swift in Sources */,
+				5B97BD0E1F3E29D900D883DE /* KQArlert.swift in Sources */,
 				5B8D098A1F2DE43E0033346D /* Categories.swift in Sources */,
 				5B37C1581F2BEC8400B87832 /* CauseViewController.swift in Sources */,
 				5B54EF2D1F32E38600B8E9AD /* NoiDungDataStore.swift in Sources */,

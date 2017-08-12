@@ -22,7 +22,8 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        imgMenu.image = #imageLiteral(resourceName: "babyicon")
+        imgMenu.image = #imageLiteral(resourceName: "original")
+        imgMenu.layer.cornerRadius = 10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1396" height="491"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t02-rF-znC" id="YDq-fc-vX8">
-                <rect key="frame" x="0.0" y="0.0" width="1396" height="491"/>
+                <rect key="frame" x="0.0" y="0.0" width="1396" height="490.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knM-QV-CC0">
@@ -49,7 +49,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLk-O7-EQF">
-                        <rect key="frame" x="465.5" y="317" width="465" height="41"/>
+                        <rect key="frame" x="465.5" y="317" width="465" height="32.5"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <state key="normal" title="BẮT ĐẦU">
@@ -90,7 +90,7 @@
                     <constraint firstItem="nLk-O7-EQF" firstAttribute="top" secondItem="knM-QV-CC0" secondAttribute="bottom" constant="20" id="S9s-3T-5kr"/>
                     <constraint firstItem="nLk-O7-EQF" firstAttribute="width" secondItem="YDq-fc-vX8" secondAttribute="width" multiplier="1:3" id="WXD-kf-86z"/>
                     <constraint firstItem="xIJ-2S-OU6" firstAttribute="leading" secondItem="jx1-hI-HhZ" secondAttribute="trailing" constant="8" id="dyV-hh-QYn"/>
-                    <constraint firstItem="nLk-O7-EQF" firstAttribute="height" secondItem="YDq-fc-vX8" secondAttribute="height" multiplier="1:12" id="i6Y-Tl-dLa"/>
+                    <constraint firstItem="nLk-O7-EQF" firstAttribute="height" secondItem="YDq-fc-vX8" secondAttribute="height" multiplier="1:15" id="i6Y-Tl-dLa"/>
                     <constraint firstItem="Xcz-cs-kPy" firstAttribute="leading" secondItem="YDq-fc-vX8" secondAttribute="leading" constant="8" id="kD8-n5-SFa"/>
                     <constraint firstItem="knM-QV-CC0" firstAttribute="width" secondItem="YDq-fc-vX8" secondAttribute="width" multiplier="1:1.2" id="njm-ko-elX"/>
                     <constraint firstItem="jx1-hI-HhZ" firstAttribute="leading" secondItem="YDq-fc-vX8" secondAttribute="leading" constant="8" id="qd0-Vs-zVF"/>

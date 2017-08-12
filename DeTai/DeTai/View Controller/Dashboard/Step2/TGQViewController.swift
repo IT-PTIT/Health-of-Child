@@ -24,7 +24,7 @@ class TGQViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        self.navigationItem.backBarButtonItem?.title = ""
         TGQTableViewCell.registerWith(tblView: tbvTGQ)
         title = tgq.TenTGQ
         tbvTGQ.delegate = self

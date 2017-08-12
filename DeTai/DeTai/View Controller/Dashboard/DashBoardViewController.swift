@@ -36,6 +36,11 @@ class DashBoardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //RootTab.self
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     internal func timerAction() {
         if updateCounter < 5 {
             pageHome.currentPage = updateCounter
@@ -52,9 +57,9 @@ class DashBoardViewController: UIViewController {
     }
     
     func loadData() {
-        let keys = ["1","2","3","4","5"]
-        let names = ["Tìm hiểu cơ thể trẻ", "Chuẩn đoán", "Bệnh và các rối loạn", "Sơ cưu và chăm sóc trẻ", "Lịch sử"]
-        let images = [#imageLiteral(resourceName: "Reading"), #imageLiteral(resourceName: "Dig"), #imageLiteral(resourceName: "launch"), #imageLiteral(resourceName: "take-care"), #imageLiteral(resourceName: "star")]
+        let keys = ["1","2","3","4","5", "6"]
+        let names = ["Tìm hiểu cơ thể trẻ", "Chuẩn đoán", "Bệnh và các rối loạn", "Sơ cưu và chăm sóc trẻ", "Lịch sử", "Hướng dẫn sử dụng"]
+        let images = [#imageLiteral(resourceName: "Reading"), #imageLiteral(resourceName: "Dig"), #imageLiteral(resourceName: "launch"), #imageLiteral(resourceName: "take-care"), #imageLiteral(resourceName: "star"), #imageLiteral(resourceName: "HDSD")]
         for i in 0 ..< keys.count {
             dataHome.append(Categories(image: images[i], name: names[i], key: keys[i]))
         }
@@ -99,8 +104,10 @@ extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDat
             newVC.index = indexPath.item
             newVC.loadMenu()
         case 2:
-            header = ["BỆNH NHIỄM TRÙNG", "RỐI LOẠN CƠ, XƯƠNG & KHỚP","RỐI LOẠN VỀ DA","RỐI LOẠN VỀ MÁU & HỆ TUẦN HOÀN"]
+            header = ["BỆNH NHIỄM TRÙNG", "RỐI LOẠN CƠ, XƯƠNG & KHỚP","RỐI LOẠN VỀ DA","RỐI LOẠN VỀ MÁU & HỆ TUẦN HOÀN", "RỐI LOẠN CỦA HỆ HÔ HẤP", "CÁC RỐI LOẠN CỦA HỆ THẦN KINH","RỐI LOẠN VỀ TAI VÀ MẮT", "NHỮNG VẤN ĐỀ VỀ HÀNH VI VÀ CẢM XÚC", "NHỮNG RỐI LOẠN VỀ RĂNG MIỆNG", "NHỮNG RỐI LOẠN Ở HỆ TIÊU HOÁ", "RỐI LOẠN NỘI TIẾT TỐ", "RỐI LOẠN ĐƯỜNG NIỆU VÀ SINH DỤC", "NHỮNG BỆNH LÝ VỀ GIEN"]
             newVC.numberSection = header
+            newVC.index = indexPath.item
+            newVC.loadChuong()
         default:
             header = []
             newVC.numberSection = header
