@@ -39,6 +39,13 @@
 		5B37C15A1F2BEDAD00B87832 /* CauseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */; };
 		5B37C15C1F2BEDC300B87832 /* CauseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */; };
 		5B53F8B11F27860700BC2014 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */; };
+		5B54EF231F3224D000B8E9AD /* ReadDataPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54EF221F3224D000B8E9AD /* ReadDataPDF.swift */; };
+		5B54EF271F32251200B8E9AD /* ReadDataPDF.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B54EF261F32251200B8E9AD /* ReadDataPDF.storyboard */; };
+		5B54EF291F32E12600B8E9AD /* NOIDUNG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54EF281F32E12600B8E9AD /* NOIDUNG.swift */; };
+		5B54EF2B1F32E20500B8E9AD /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 5B54EF2A1F32E20500B8E9AD /* default.realm */; };
+		5B54EF2D1F32E38600B8E9AD /* NoiDungDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54EF2C1F32E38600B8E9AD /* NoiDungDataStore.swift */; };
+		5B54EF301F32FEB100B8E9AD /* besosinh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5B54EF2F1F32FEB100B8E9AD /* besosinh.pdf */; };
+		5B54EF341F33024E00B8E9AD /* Be so sinh.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5B54EF331F33024E00B8E9AD /* Be so sinh.pdf */; };
 		5B5886AA1F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5886A91F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift */; };
 		5B8D09811F2DD5430033346D /* NNBaseDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09801F2DD5430033346D /* NNBaseDataStore.swift */; };
 		5B8D098A1F2DE43E0033346D /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8D09891F2DE43E0033346D /* Categories.swift */; };
@@ -123,6 +130,13 @@
 		5B37C1591F2BEDAD00B87832 /* CauseViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CauseViewCell.swift; sourceTree = "<group>"; };
 		5B37C15B1F2BEDC300B87832 /* CauseViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CauseViewCell.xib; sourceTree = "<group>"; };
 		5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5B54EF221F3224D000B8E9AD /* ReadDataPDF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadDataPDF.swift; sourceTree = "<group>"; };
+		5B54EF261F32251200B8E9AD /* ReadDataPDF.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReadDataPDF.storyboard; sourceTree = "<group>"; };
+		5B54EF281F32E12600B8E9AD /* NOIDUNG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NOIDUNG.swift; sourceTree = "<group>"; };
+		5B54EF2A1F32E20500B8E9AD /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		5B54EF2C1F32E38600B8E9AD /* NoiDungDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiDungDataStore.swift; sourceTree = "<group>"; };
+		5B54EF2F1F32FEB100B8E9AD /* besosinh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = besosinh.pdf; sourceTree = "<group>"; };
+		5B54EF331F33024E00B8E9AD /* Be so sinh.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Be so sinh.pdf"; sourceTree = "<group>"; };
 		5B5886A91F2A106E00D32BD9 /* TrieuChungBaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrieuChungBaseDataStore.swift; sourceTree = "<group>"; };
 		5B8D09801F2DD5430033346D /* NNBaseDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NNBaseDataStore.swift; sourceTree = "<group>"; };
 		5B8D09891F2DE43E0033346D /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -208,6 +222,7 @@
 		41B629561F1A93EC00ACF83E /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B54EF211F32249E00B8E9AD /* ReadDataPDF */,
 				41B629721F1A9CB200ACF83E /* BabyTracker */,
 				41B629731F1A9CB200ACF83E /* Dashboard */,
 				41B629741F1A9CB200ACF83E /* Inbox */,
@@ -237,6 +252,7 @@
 				41B6296A1F1A977F00ACF83E /* Dashboard.storyboard */,
 				41B6296E1F1A97AC00ACF83E /* Inbox.storyboard */,
 				41B629701F1A97B500ACF83E /* Profile.storyboard */,
+				5B54EF261F32251200B8E9AD /* ReadDataPDF.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -366,6 +382,23 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		5B54EF211F32249E00B8E9AD /* ReadDataPDF */ = {
+			isa = PBXGroup;
+			children = (
+				5B54EF221F3224D000B8E9AD /* ReadDataPDF.swift */,
+			);
+			path = ReadDataPDF;
+			sourceTree = "<group>";
+		};
+		5B54EF2E1F32FEA100B8E9AD /* FilePDF */ = {
+			isa = PBXGroup;
+			children = (
+				5B54EF331F33024E00B8E9AD /* Be so sinh.pdf */,
+				5B54EF2F1F32FEB100B8E9AD /* besosinh.pdf */,
+			);
+			path = FilePDF;
+			sourceTree = "<group>";
+		};
 		5B5886A81F2A105500D32BD9 /* BaseDataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +406,7 @@
 				5B0C957D1F2BC5C4002BC2D3 /* ChuanDoanBaseDataStore.swift */,
 				5B8D09801F2DD5430033346D /* NNBaseDataStore.swift */,
 				5B8D099C1F2DF09D0033346D /* TGQBaseDataStore.swift */,
+				5B54EF2C1F32E38600B8E9AD /* NoiDungDataStore.swift */,
 			);
 			path = BaseDataStore;
 			sourceTree = "<group>";
@@ -403,6 +437,7 @@
 		5BB3A0B11F2650A5006E7CFA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5B54EF2E1F32FEA100B8E9AD /* FilePDF */,
 				5B8D098B1F2DE4480033346D /* Table */,
 				5B8D09881F2DE43E0033346D /* Data */,
 			);
@@ -449,6 +484,7 @@
 				5B1587071F13C09600F0457A /* Model */,
 				5BED28BF1F30ED4B00F259ED /* default.realm */,
 				5BD6D5721EC83AC90034A40A /* AppDelegate.swift */,
+				5B54EF2A1F32E20500B8E9AD /* default.realm */,
 				5BD6D5791EC83AC90034A40A /* Assets.xcassets */,
 				5B53F8B01F27860700BC2014 /* GoogleService-Info.plist */,
 				5BD6D57E1EC83AC90034A40A /* Info.plist */,
@@ -612,10 +648,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B629671F1A975B00ACF83E /* BabyTracker.storyboard in Resources */,
+				5B54EF301F32FEB100B8E9AD /* besosinh.pdf in Resources */,
 				5BED28C01F30ED4B00F259ED /* default.realm in Resources */,
 				5B28F07D1F2E2869007A3F1D /* TGQTableViewCell.xib in Resources */,
 				41B629611F1A94BD00ACF83E /* LaunchScreen.storyboard in Resources */,
 				41B629691F1A976C00ACF83E /* Location.storyboard in Resources */,
+				5B54EF2B1F32E20500B8E9AD /* default.realm in Resources */,
 				5B0C957C1F2BA89B002BC2D3 /* Dianose2ViewCell.xib in Resources */,
 				5B0C95711F2B8816002BC2D3 /* DiagnoseCell.xib in Resources */,
 				5B11CE6B1F1E6BCD00971EBD /* HomeCell.xib in Resources */,
@@ -623,6 +661,8 @@
 				5BD6D57A1EC83AC90034A40A /* Assets.xcassets in Resources */,
 				5B37C15C1F2BEDC300B87832 /* CauseViewCell.xib in Resources */,
 				5B53F8B11F27860700BC2014 /* GoogleService-Info.plist in Resources */,
+				5B54EF271F32251200B8E9AD /* ReadDataPDF.storyboard in Resources */,
+				5B54EF341F33024E00B8E9AD /* Be so sinh.pdf in Resources */,
 				41B6296B1F1A977F00ACF83E /* Dashboard.storyboard in Resources */,
 				41B629711F1A97B500ACF83E /* Profile.storyboard in Resources */,
 				41B629621F1A94BD00ACF83E /* Main.storyboard in Resources */,
@@ -789,6 +829,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B54EF291F32E12600B8E9AD /* NOIDUNG.swift in Sources */,
 				41B629781F1A9CD000ACF83E /* BabyTrackerViewController.swift in Sources */,
 				5B8D09971F2DE4480033346D /* NGUYENNHAN.swift in Sources */,
 				5BB3A0B61F265256006E7CFA /* MenuTableViewCell.swift in Sources */,
@@ -804,6 +845,7 @@
 				5B8D09981F2DE4480033346D /* NN_BENH.swift in Sources */,
 				5B8D098A1F2DE43E0033346D /* Categories.swift in Sources */,
 				5B37C1581F2BEC8400B87832 /* CauseViewController.swift in Sources */,
+				5B54EF2D1F32E38600B8E9AD /* NoiDungDataStore.swift in Sources */,
 				5B181F641F1F61AF001D797C /* MenuController.swift in Sources */,
 				41B629651F1A952F00ACF83E /* RootViewController.swift in Sources */,
 				FE537DF71F332A5000781BD2 /* RegisterViewController.swift in Sources */,
@@ -812,6 +854,7 @@
 				5B8D099D1F2DF09D0033346D /* TGQBaseDataStore.swift in Sources */,
 				5B8D099A1F2DE4480033346D /* TRIEUCHUNG.swift in Sources */,
 				5B8D09991F2DE4480033346D /* NN_TGQ.swift in Sources */,
+				5B54EF231F3224D000B8E9AD /* ReadDataPDF.swift in Sources */,
 				5B37C15A1F2BEDAD00B87832 /* CauseViewCell.swift in Sources */,
 				5BD6D5731EC83AC90034A40A /* AppDelegate.swift in Sources */,
 				5B0C95761F2BA839002BC2D3 /* DiagnoseViewController.swift in Sources */,

@@ -91,9 +91,12 @@ extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDat
         case 0:
             header = ["CƠ THỂ HỌC VÀ SỰ PHÁT TRIỂN CỦA TRẺ","SỐNG KHOẺ MẠNH","NHỮNG VẤN ĐỂ Ở EM BÉ"]
             newVC.numberSection = header
+            newVC.index = indexPath.item
+            newVC.loadChuong()
         case 1:
             header = ["TRẺ EM DƯỚI 1 TUỔI","TRẺ EM TRỂN 1 TUỔI", "TRẺ EM MỌI LỨA TUỔI"]
             newVC.numberSection = header
+            newVC.index = indexPath.item
             newVC.loadMenu()
         case 2:
             header = ["BỆNH NHIỄM TRÙNG", "RỐI LOẠN CƠ, XƯƠNG & KHỚP","RỐI LOẠN VỀ DA","RỐI LOẠN VỀ MÁU & HỆ TUẦN HOÀN"]
@@ -101,6 +104,8 @@ extension DashBoardViewController: UICollectionViewDelegate, UICollectionViewDat
         default:
             header = []
             newVC.numberSection = header
+            newVC.index = indexPath.item
+            newVC.loadChuong()
         }
         self.navigationController?.pushViewController(newVC, animated: true)
     }
